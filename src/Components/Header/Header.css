@@ -1,0 +1,266 @@
+/* General styles for the header */
+.ne_Header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 132px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for elegant effect */
+  backdrop-filter: blur(10px); /* Adds a blur effect for a glassy look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  transition: background-color 0.3s ease; /* Smooth transition when scrolling */
+}
+
+/* Logo styling */
+.logo h2 {
+  color: var(--gold_color); /* Pearl-like color scheme */
+  font-weight: 600; /* Increased font weight for a more premium feel */
+  font-size: 2rem; /* Larger logo text */
+  letter-spacing: 2px; /* Add space between letters for a modern look */
+  text-transform: uppercase; /* Uppercase letters for branding consistency */
+}
+
+/* Navigation menu styling */
+.ne_nav_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ne_nav_links a {
+  color: var(--black_color);
+  font-family: var(--heading_font); /* Neutral color for a clean and modern look */
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Add underline effect on hover */
+.ne_nav_links a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary_color);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.ne_nav_links a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.ne_nav_links a:hover {
+  color: var(--gold_color);
+}
+
+.header_buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13.52px;
+}
+.book_now_header button{
+  background-color: var(--primary_color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Language button styling */
+.language_btn select {
+  border: none;
+  background-color: var(--black_color); /* Match language button with logo color */
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Burger menu icon styles */
+.burger_menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: var(--gold_color); /* Match with brand color */
+}
+
+/* Styles for when the menu is active (clicked) */
+.ne_nav_menu.active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.ne_nav_menu.active .ne_nav_links {
+  margin: 10px 0;
+}
+
+.ne_nav_links a {
+  font-size: 20px;
+}
+
+
+
+/* Responsive styles for smaller screens */
+
+
+@media (max-width: 1200px) {
+  .ne_Header{
+    padding: 1rem 1.2rem !important;
+  }
+  /* .ne_Header{
+    padding: 1rem 1.2rem;
+  } */
+  .ne_nav_menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .burger_menu {
+    display: block;
+  }
+
+  .ne_nav_links {
+    margin: 10px 0;
+  }
+}
+/* Dropdown styles for services */
+/* .services_link {
+  position: relative;
+  cursor: pointer;
+}
+
+.services_dropdown {
+
+  box-shadow: 0px 5px 8.1px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 16px 13px;
+  min-width: 184px;
+  z-index: 1000;
+  position: absolute;
+  top: 170%;
+  left: -34px;
+  box-shadow: 0px 5px 8.1px 0px ;
+  
+
+}
+
+.services_dropdown a {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(36, 36, 36, 1) ;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--black_color);
+  font-family: var(--heading_font);
+  line-height: 21.6px;
+}
+
+.services_dropdown a:hover {
+  color: var(--primary_color);
+} */
+.services_link {
+  position: relative;
+  cursor: pointer;
+}
+
+.services_dropdown {
+  box-shadow: 0px 5px 8.1px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 1);
+  display: none; /* Hidden by default */
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 16px 13px;
+  min-width: 184px;
+  z-index: 1000;
+  position: absolute;
+  top: 100%; /* Place right below parent */
+  left: 0;
+}
+
+/* Show dropdown when hovered or when `isServicesOpen` is true */
+.services_link:hover .services_dropdown,
+.services_dropdown.active {
+  display: flex;
+}
+
+.services_dropdown a {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(36, 36, 36, 1);
+  padding: 0.5rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--black_color);
+  font-family: var(--heading_font);
+  line-height: 21.6px;
+}
+
+.services_dropdown a:hover {
+  color: var(--primary_color);
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 968px) {
+  .services_dropdown {
+    position: static;
+    box-shadow: none;
+    padding: 0.5rem;
+  }
+  
+  .services_dropdown a {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+}
+@media(max-width:540px){
+  .header_buttons{
+    display: none;
+  }
+}

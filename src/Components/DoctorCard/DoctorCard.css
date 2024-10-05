@@ -1,0 +1,30 @@
+.DoctorCard{
+    padding: 13.16px 12.92px;
+    border-radius: 15.43px;
+    background: var(--primary_color);
+    width: 200.06px;
+    height: 300px;
+    cursor: pointer;
+}
+.DoctorCard img{
+    width: 100%;
+    border-radius: 15.8px;
+    margin: 0 auto;
+}
+.DoctorCard h2{
+    margin-top: 13.51px;
+    font-family: var(--heading_font);
+    font-size: 20.57px;
+    font-weight: 700;
+    line-height: 29.49px;
+    text-align: center;
+    color: var(--white_color);
+}
+.DoctorCard p{
+    font-family: var(--text_font);
+    font-size: 13.16px;
+    font-weight: 400;
+    line-height: 18.17px;
+    text-align: center;
+    color: var(--white_color);
+}

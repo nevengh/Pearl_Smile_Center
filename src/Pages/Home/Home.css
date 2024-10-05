@@ -1,0 +1,77 @@
+
+
+
+.About_us_home{
+    margin-top: 138px;
+}
+.About_us_home_text{
+    margin: 100px auto;
+    text-align: center;
+    max-width: 1001px;
+    font-family: var(--text-font);
+    line-height: 24.84px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Our Offers */
+.Our_Offers_Home{
+    margin: 100px;
+    background-color: var(--gray_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 20px 0;
+}
+.Our_Offers_Cards_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 64px;
+}
+
+/* Our Services */
+.Our_Services_home{
+    margin-top: 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    background-color: var(--gray_color);
+}
+.Our_Services_Card_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 64px;
+}
+/* 
+    ==========================
+       Our_Doctor_home
+    =========================
+*/
+.Our_Doctor_home{
+    background-color: var(--gray_color);
+    padding: 20px 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+.Our_Doctor_Card_Container{
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:30px;
+}

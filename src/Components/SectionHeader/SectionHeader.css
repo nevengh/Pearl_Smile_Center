@@ -1,0 +1,11 @@
+.SectionHeader h1{
+    font-family: var(--heading_font);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 76.8px;
+    color: var(--primary_color);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 20;
+}

@@ -1,0 +1,25 @@
+.service_Profile{
+    margin: 0 auto;
+    width: 80%;
+}
+.service_content_container{
+    margin-top: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    
+}
+.service_resume{
+    font-size: 20px;
+    font-family: var(--text_font);
+    line-height: 27.6px;
+    color: var(--black_color);
+    text-align: start;
+    max-width: 582px;
+}
+.service_sections_container{
+  padding: 10px;
+  margin-top: 56px;
+}

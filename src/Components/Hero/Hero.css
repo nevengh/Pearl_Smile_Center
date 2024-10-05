@@ -1,0 +1,120 @@
+.hero{
+    height: 100%;
+    background-color: red;
+}
+.carousel_content{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+/* Add this to your Hero.css */
+
+/* General styling for the carousel container */
+.carousel-image-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image covers the entire container */
+  .carousel-image-overlay img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  /* Gradient overlay */
+  .carousel-image-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+  }
+  
+  /* The content on top of the overlay */
+  .carousel_content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    top: -60%;
+  }
+  
+
+  
+  .carousel_buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  
+  .carousel_title{
+    text-align: start;
+      max-width: 427px;
+      font-family: var(--heading_font);
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 86.4px;
+      color: var(--primary_color);
+}
+.carousel_text{
+    text-align: start;
+    font-family: var(--heading_font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    max-width: 471px;
+    color: var(--primary_color);
+    margin-top: 11px;
+}
+
+.carousel-control-next-icon,.carousel-control-prev-icon{
+    display: none !important;
+}
+.carousel-buttons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+
+}
+
+
+@media(max-width:540px){
+    .carousel_content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        text-align: left;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .carousel_title{
+        text-align: start;
+          width: 327px;
+          font-family: var(--heading_font);
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 46.4px;
+          color: var(--primary_color);
+    }
+    .carousel_text{
+        text-align: start;
+        font-family: var(--heading_font);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        max-width: 371px;
+        color: var(--primary_color);
+        margin-top: 11px;
+    }
+}

@@ -1,0 +1,34 @@
+.ServicesCard {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Ensures that the image does not overflow the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Add a fallback background color */
+  position: relative;
+}
+.servie_name_card{
+    position: absolute;
+    bottom: 0;
+    line-height: 26.4px;
+    font-family: var(--heading_font);
+    font-size: 22px;
+    color: var(--white_color);
+    z-index: 3;
+}
+.ServicesCard img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.overlay_card_service{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 73px;
+    background: linear-gradient(180deg, rgba(178, 144, 41, 0) 17.12%, #B29029 100%);
+
+}

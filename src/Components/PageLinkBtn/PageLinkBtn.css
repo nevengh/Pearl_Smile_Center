@@ -1,0 +1,18 @@
+.PageLinkBtn a{
+    text-decoration: underline;
+    color: var(--primary_color);
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    font-family: var(--heading_font);
+    transition: .3s all;
+    text-align: center;
+}
+.PageLinkBtn a:hover{
+    color: rgb(186, 156, 74);
+    font-size: 28px;
+}
+.PageLinkBtn a span{
+    font-size: 25px;
+}

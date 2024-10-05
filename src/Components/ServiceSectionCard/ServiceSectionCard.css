@@ -1,0 +1,34 @@
+.ServiceSectionCard{
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 30px;
+}
+.ServiceSectionCard::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--primary_color);
+}
+.ServiceSectionCard_title{
+    font-size: 36px;
+    line-height: 43.2px;
+    font-family: var(--heading_font);
+    color: var(--primary_color);
+}
+.ServiceSectionCard_text{
+    font-family: var(--text_font);
+    font-size: 18px;
+    color: var(--black_color);
+    line-height: 24.84px;
+    width: 80%;
+}
+:dir(rtl) .ServiceSectionCard {
+    padding-left: unset;
+    padding-right: 30px;
+  }
+:dir(rtl) .ServiceSectionCard::before {
+    left: unset;
+    right: 0; /* Apply for RTL */
+  }

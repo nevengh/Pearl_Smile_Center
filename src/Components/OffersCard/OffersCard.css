@@ -1,0 +1,19 @@
+.Our_Offers_Card {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Ensures that the image does not overflow the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Add a fallback background color */
+}
+
+.Our_Offers_CCard img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container while maintaining aspect ratio */
+    transition: opacity 0.5s ease-in-out; /* Slow down the transition */
+    display: block;
+}

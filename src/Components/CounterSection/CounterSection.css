@@ -1,0 +1,99 @@
+.Counter_section_home{
+    margin-top: 135px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+.Counter_section_home h1{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    
+}
+.Counter_section_home::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 578.1px;
+    background-image: url(../../assets/images/OBJECTS.png);
+    background-position: center;
+    background-size: cover;
+    top: 10%;
+}
+.Counter_cards_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 39.54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    
+}
+.Counter_card{
+    width: 185.09px;
+    height: 241.37px;
+    border-radius: 17.67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20.56px;
+    background: var(--primary_color);
+    padding-top: 10px;
+    padding-bottom: 52px;
+    
+}
+.Counter_Number{
+    font-family: var(--heading_font);
+    font-size: 116.2px;
+    font-weight: 700;
+    line-height: 141.44px;
+    color: rgba(178, 144, 41, 1);
+    position: relative;
+}
+.Counter_Number span{
+    position: absolute;
+    top: -20%;
+    font-size: 40px;
+}
+.Counter_Card_text{
+    font-size: 25.24px;
+    font-family: var(--heading_font);
+    font-weight: 700;
+    line-height: 30.29px;
+    text-align: center;
+    color: var(--white_color);
+}
+
+
+
+
+@media(max-width:580px){
+    .Counter_cards_container{
+        transform: translate(-50%,-30%);
+        
+    }
+    .Counter_card{
+        width: 155.09px;
+        height: 200.37px;
+        gap: 30px;
+    }
+    .Counter_Number{
+        font-family: var(--heading_font);
+        font-size: 60.2px;
+        line-height: 40.44px;
+    }
+    .Counter_Number span{
+        font-size: 30px;
+    }
+    .Counter_Card_text{
+        font-size: 18.24px;
+    }
+}
