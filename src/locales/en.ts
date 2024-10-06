@@ -27,7 +27,8 @@ const en: Translations = {
   OurTeam:"Our Team",
   noServicesAvailable:"no Services Available ...",
   servicesName:"service of",
-
+  servicePageTitle:"We provide all health and cosmetic services, including all medical departments for all family members, whether you are looking for skincare, specialized medical consultation, or integrated cosmetic services",
+  
 
 };
 

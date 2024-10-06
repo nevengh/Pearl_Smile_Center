@@ -26,6 +26,6 @@ export interface Translations {
     OurTeam:string;
     noServicesAvailable:string;
     servicesName:string;
-    
+    servicePageTitle:string;
   }
   

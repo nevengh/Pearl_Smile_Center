@@ -1,0 +1,158 @@
+.Footer{
+    padding: 39px 122px  46px 122px;
+    background-color: rgba(36, 36, 36, 1);
+margin-top: 200px;
+}
+.footer_text{
+    max-width: 1258px;
+    line-height: 26.22px;
+    font-size: 19px;
+    font-family: var(--text_fonr);
+    font-weight: 400;
+    color: var(--white_color);
+}
+.subscripe_con{
+    margin: 30px auto;
+    max-width: 954px;
+    padding: 28.83px 25.54px 31.31px 25.54px;
+    background-color: var(--primary_color);
+    border-radius: 4.94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 203.45px;
+}
+.social_footer,.social_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14.83px;
+}
+.social_icons img{
+    width: 30px;
+}
+.social_footer h1{
+    font-family: var(--heading_font);
+    font-weight: 700;
+    font-size: 34.6px;
+    color: rgba(36, 36, 36, 1);
+    line-height: 41.52px;
+}
+
+
+
+/* From Uiverse.io by Yaya12085 */ 
+.subscrip_input {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 290px;
+    
+  }
+  
+  .subscrip_input > span,
+  .subscrip_input .input {
+    white-space: nowrap;
+    display: block;
+  }
+  
+  .subscrip_input > span,
+  .subscrip_input .input:first-child {
+    border-radius: 6px 0 0 6px;
+  }
+  
+  .subscrip_input > span,
+  .subscrip_input .input {
+    border-radius: 0 6px 6px 0;
+  }
+  
+  .subscrip_input > span,
+  .subscrip_input .input {
+    margin-left: -1px;
+  }
+  
+  .subscrip_input .input {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .subscrip_input span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--white_color);
+    background: var(--black_color);
+    border: 1px solid #CDD9ED;
+    font-weight: bold;
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  }
+  
+  .subscrip_input:focus-within > span {
+    color: #fff;
+    background-color: var(--primary_color);
+    border-color: var(--black_color);
+  }
+  
+  .subscrip_input .input {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: #99A3BA;
+    border: 1px solid  #CDD9ED;
+    background: #fff;
+    transition: border 0.3s ease;
+  }
+  
+  .subscrip_input .input::placeholder {
+    color: #CBD1DC;
+  }
+  
+  .subscrip_input .input:focus {
+    outline: none;
+    border-color: var(--black_color);
+  }
+  .contact_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 52.67px;
+  }
+  .contact_info_con{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+  }
+  .phone_number{
+    font-family: var(--text_font);
+    font-weight:500;
+    line-height: 21.86px;
+    color: var(--primary_color);
+    width: 192px;
+  }
+  .Tel{
+    font-family: var(--form_font);
+    font-size: 14px;
+    line-height: 19.12px;
+    color: rgba(154, 158, 166, 1);
+  }
+
+  @media(max-width:1195px){
+    .subscripe_con{
+        gap: 30px;
+    }
+  }

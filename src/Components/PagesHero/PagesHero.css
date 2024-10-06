@@ -25,4 +25,5 @@ background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%
     line-height: 112.8px;
     font-family: var(--heading_font);
     color: var(--primary_color);
+    text-align: center;
 }

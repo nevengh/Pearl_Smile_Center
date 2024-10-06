@@ -107,7 +107,7 @@ const Home = () => {
       {/* About Us */}
       <div className="About_us_home">
         <SectionHeader title={translations.AboutSectionHeader} />
-        <p className="About_us_home_text">{aboutText}</p>{" "}
+        <p className="About_us_home_text">{aboutText}</p>
         {/* Render fetched text */}
       </div>
       {/* Our Offers */}
@@ -140,7 +140,7 @@ const Home = () => {
         <SectionHeader title={translations.OurServices} />
         <OurServiceSection/>
         <PageLinkBtn
-          Page_Url="/services"
+          Page_Url="/all-services"
           Link_Name={translations.SeeOurServices}
         />
       </div>
