@@ -11,10 +11,10 @@ export interface Translations {
     doctors: string;
     blogs: string;
     bookNow: string;
-    loading: string; // Add this to avoid the error
+    loading: string; 
     slideTitle:string;
     slideText:string;
-    AboutSectionHeader:string
+    AboutSectionHeader:string;
     OurOffers:string;
     loadingOffers:string;
     SeeOurOffersLink:string;
@@ -63,5 +63,6 @@ export interface Translations {
     PearlSmileSeo:string;
     DoctorProfileDesSeo:string;
     Noimageavailable:string;
+    
   }
   

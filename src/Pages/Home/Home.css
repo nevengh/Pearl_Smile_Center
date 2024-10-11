@@ -92,7 +92,14 @@
 .gallery_home{
     width:100%;
     margin: 50px auto;
-    /* border: 1px solid orange; */
     background-color: var(--gray_color);
     padding: 1rem;
+    
+}
+.gallery_images_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }

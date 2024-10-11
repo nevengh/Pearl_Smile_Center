@@ -15,6 +15,7 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogsProfile from './Pages/BlogsProfile/BlogsProfile';
 import { HelmetProvider } from 'react-helmet-async';
+import AllGallery from './Pages/AllGallery/AllGallery';
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/doctor/:id' element={<DoctocProfile/>}/>
           <Route  path='/service/:id' element={<ServiceProfile/>}  />
           <Route  path='/blogs/:id' element={<BlogsProfile/>}  />
+          <Route path='/gallery' element={<AllGallery/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

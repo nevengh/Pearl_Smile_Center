@@ -160,6 +160,7 @@ const Home = () => {
         
         <div className="gallery_images_container">
           <Gallery/>
+          <PageLinkBtn Page_Url="/gallery" Link_Name={translations.mediaGallery} />
         </div>
       </div>
     </div>
