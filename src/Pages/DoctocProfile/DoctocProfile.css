@@ -1,6 +1,5 @@
 .DoctocProfile{
     height: 100vh;
-    background-color: red;
 }
 .Doctor_Profile_content_container{
     margin-top: 84px;
@@ -9,7 +8,7 @@
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
-    border: 2px solid red;
+
 }
 .doctor_info_sec{
     display: flex;
@@ -17,7 +16,7 @@
     gap: 10px;
 }
 .img_doctor{
-    border: 1px solid rebeccapurple;
+
     width: 367px;
     height: 400px;
     border-radius: 18px;
@@ -57,7 +56,6 @@
     flex-direction: column;
     justify-content: start;
     gap: 15px;
-    border: 1px solid blue;
 
 }
 .doctor_services_title{
@@ -65,4 +63,13 @@
     font-size: 64px;
     font-family: var(--heading_font);
     color: var(--primary_color);
+}
+
+.video iframe{
+    margin: 80px auto;
+    width: 24%;
+    height: 507px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

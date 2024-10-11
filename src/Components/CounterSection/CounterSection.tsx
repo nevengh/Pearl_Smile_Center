@@ -16,7 +16,7 @@ const CounterSection = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
 
-  // State to hold the number of departments
+  
   const [departmentCount, setDepartmentCount] = useState(0);
 
   // Fetch the number of departments
@@ -30,17 +30,16 @@ const CounterSection = () => {
           },
         });
 
-        // Assuming the API returns an array of departments
         const departments = response.data.data;
         console.log('hii',departments)
-        setDepartmentCount(departments.length); // Set the count of departments
+        setDepartmentCount(departments.length);
       } catch (error) {
         console.error("Error fetching department data:", error);
       }
     };
 
     fetchDepartments();
-  }, [language]); // Re-fetch if the language changes
+  }, [language]); 
 
   return (
     <div className="Counter_section_home">
@@ -51,7 +50,7 @@ const CounterSection = () => {
           <p className="Counter_Card_text">{translations.Specialists}</p>
         </div>
         <div className="Counter_card">
-          <h2 className="Counter_Number">{departmentCount}</h2> {/* Dynamically set department count */}
+          <h2 className="Counter_Number">{departmentCount}</h2> 
           <p className="Counter_Card_text">{translations.Departments}</p>
         </div>
         <div className="Counter_card">

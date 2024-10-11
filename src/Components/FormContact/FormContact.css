@@ -1,0 +1,104 @@
+.FormContact form{
+    width: 100%;
+    /* height: 600px; */
+    background-color: var(--white_color);
+    border-radius: 25px;
+    padding: 38px 45px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+}
+.input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    margin-top: 37px;
+}
+.form_first_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.input_group label{
+    font-family: var(--form_font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(111, 116, 130, 1);
+}
+.input_group input{
+    width: 251px;
+    height: 48px;
+    border-radius: 4px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    background: rgba(248, 250, 252, 1);
+    font-family: var(--form_font);
+    font-size: 16px;
+    color: rgba(111, 116, 130, 1);
+}
+.input_group input[type="email"]{
+    width: 100%;
+}
+.input_group textarea{
+    width: 100%;
+    height: 139px;
+    border-radius: 4px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    background: rgba(248, 250, 252, 1);
+    font-family: var(--form_font);
+    font-size: 16px;
+    color: rgba(111, 116, 130, 1);
+    resize: none
+}
+.form_last_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 58px !important;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+.form_last_row .input_group{
+    margin: 0 !important;
+}
+.input_group select{
+    width: 253px;
+    height: 48px;
+    border-radius: 4px;
+    background: rgba(248, 250, 252, 1);
+    border: none;
+    outline: none;
+    padding: 12px;
+    color:rgba(111, 116, 130, 1) ;
+    cursor: pointer;
+}
+.Submit_btn button{
+    width: 202px;
+    height: 53.77px;
+    border-radius: 13px;
+    background-color: var(--primary_color);
+    border: none;
+    outline: none;
+}
+
+
+@media(max-width:650px){
+    .form_first_row {
+        flex-direction: column; /* Stack the inputs vertically */
+        gap: 20px; /* Adjust the gap between inputs */
+        width: 100%; /* Ensure full width of the form row */
+      }
+      .input_group {
+        width: 100%; /* Make each input group take full width */
+      }
+      .input_group input {
+        width: 100%; /* Ensure the input fields take full width */
+      }
+    
+}

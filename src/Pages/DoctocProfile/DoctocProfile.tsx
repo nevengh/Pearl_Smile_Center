@@ -8,6 +8,8 @@ import ar from "../../locales/ar";
 import PagesHero from '../../Components/PagesHero/PagesHero';
 import team from '../../assets/images/ourTeam.png'
 import ServicesCard from '../../Components/ServicesCard/ServicesCard';
+import SeoComponnent from '../../Components/SeoComponnent/SeoComponnent';
+// import ReactPlayer from 'react-player';
 
 // Define the structure of the service and doctor's data
 interface Service {
@@ -29,6 +31,11 @@ interface Doctor {
     path: string;
     alt: string;
   } | null; // Optional image field to handle missing data
+  video?:{
+    id:number;
+    path:string;
+    description:string;
+  }
   specialization: string;
   resume: string | null; // Allow null for the resume
   phone_number: string;
@@ -72,6 +79,12 @@ const DoctorProfile = () => {
 
   return (
     <div className='DoctorProfile'>
+      <SeoComponnent
+        title={`${translations.PearlSmileSeo} | ${doctor?.name}`}
+        keyword={`${doctor?.name}, ${doctor?.specializations}, ${translations.doctors}`}
+        description={translations.DoctorProfileDesSeo}
+        type="website"
+      />
       <PagesHero Hero_name={translations.OurTeam} hero_img={team} />
       <div className="Doctor_Profile_content_container">
         {/* Safely check if doctor.image exists */}
@@ -110,6 +123,20 @@ const DoctorProfile = () => {
             ) : (
               <p>{translations.noServicesAvailable}</p> // Handle case when no services are available
             )}
+          </div>
+          <div className="video">
+          
+          {doctor.video && (
+            <div className="video">
+              <iframe 
+                  src={doctor.video.path}
+                  frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>
+              </iframe>
+              
+            </div>
+          )}
+          
           </div>
         </div>
       </div>

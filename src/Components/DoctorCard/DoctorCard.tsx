@@ -5,14 +5,14 @@ interface DoctorCardProps{
     Doctor_Name:string;
     Doctor_sevice:string;
     img_alt:string;
-    id: number; // Add the doctor's ID prop
+    id: number; 
 }
 const DoctorCard:React.FC<DoctorCardProps> = ({img_url,Doctor_Name,Doctor_sevice,img_alt,id}) => {
     const navigate = useNavigate();
 
-  // Handle card click to navigate to doctor's detail page
+
   const handleCardClick = () => {
-    navigate(`/doctor/${id}`); // Redirect to the doctor's page using the ID
+    navigate(`/doctor/${id}`); 
   };
   return (
     <div className='DoctorCard' onClick={handleCardClick}>

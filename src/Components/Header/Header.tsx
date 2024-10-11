@@ -72,7 +72,7 @@ const Header = () => {
             <div className={`services_dropdown ${isServicesOpen ? 'show' : ''}`}>
               {services.length > 0 ? (
                 services.map((service) => (
-                  <Link key={service.id} to={`/our-services/service-${service.id}`}>
+                  <Link key={service.id} to={`/service/${service.id}`}>
                     {service.title}
                   </Link>
                 ))
@@ -86,7 +86,7 @@ const Header = () => {
           <Link to="/blogs">{translations.blogs}</Link>
         </div>
         <div className="ne_nav_links">
-          <Link to="/contact">{translations.contact}</Link>
+          <Link to="/ContactUs">{translations.contact}</Link>
         </div>
       </div>
       <div className="header_buttons">

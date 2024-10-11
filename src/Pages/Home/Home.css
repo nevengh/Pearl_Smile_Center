@@ -16,7 +16,7 @@
 
 /* Our Offers */
 .Our_Offers_Home{
-    margin: 100px;
+    margin: 100px auto;
     background-color: var(--gray_color);
     display: flex;
     flex-direction: column;
@@ -24,6 +24,7 @@
     justify-content: center;
     gap: 28px;
     padding: 20px 0;
+    width: 100%;
 }
 .Our_Offers_Cards_container{
     display: flex;
@@ -74,4 +75,24 @@
     align-items: center;
     flex-wrap: wrap;
     gap:30px;
+}
+
+/* Contact Us */
+.Form_Home{
+
+    margin-top: 91px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+}
+
+/* gallery */
+
+.gallery_home{
+    width:100%;
+    margin: 50px auto;
+    /* border: 1px solid orange; */
+    background-color: var(--gray_color);
+    padding: 1rem;
 }

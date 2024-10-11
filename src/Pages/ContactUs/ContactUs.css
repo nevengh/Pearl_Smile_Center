@@ -1,0 +1,87 @@
+.ContactTitleInfo{
+    margin-bottom: 50px;
+}
+
+.ContactTitleInfo h1 {
+    font-family: var(--heading_font);
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 76.8px;
+    color: var(--primary_color);
+  }
+  .contactTimesInfo h1 p{
+    font-family: var(--text_font);
+    color: var(--black_color);
+    font-size: 42px;
+    line-height: 57.96px;
+    
+  }
+  .ground_number{
+    width: max-content;
+  }
+  .OpenTime{
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      gap: 12px;
+      margin-top: 20px;
+  }
+  .contactTimesInfo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 83px;
+      flex-wrap: wrap;
+      /* border: 1px solid red; */
+      margin-top: 207px;
+  }
+  .contact_info_1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  .ContactUsPage .contact_info{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .ContactUs .contact_info{
+    max-width: 600px;
+    justify-content:start;
+    gap: 50px;
+  }
+  iframe {
+      border-radius: 10px;
+      /* filter: drop-shadow(0px 0px 5px #000000e1); */
+      width: 600px;
+  }
+  
+  
+  @media(max-width:600px) {
+  
+      iframe {
+          width: 100%;
+      }
+      .OpenTime {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .ContactTitleInfo h1,.contactTimesInfo p{
+        text-align: center;
+      }
+  
+  }
+  @media (max-width:420px){
+      .OpenTime {
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          gap: 12px;
+          margin-top: 20px;
+        }
+  }

@@ -1,0 +1,10 @@
+.about_video iframe{
+    margin: 30px auto;
+    width: 80%;
+    height: 507px;
+}
+.about_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

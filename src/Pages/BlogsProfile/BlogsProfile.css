@@ -1,0 +1,22 @@
+
+.blog_Profile{
+    width: 80%;
+    margin: 0 auto;
+}
+.BlogsProfile .Pages_Hero h1{
+    font-size: 54px;
+    line-height: 80.8px;
+}
+.BlogsProfile .doctor_info_sec .doctor_name {
+    width: 718px;
+}
+.BlogsProfile .blogs_tags{
+    color: var(--primary_color);
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.blogs_description{
+    margin-top: 100px;
+}

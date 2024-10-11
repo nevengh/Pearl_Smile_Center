@@ -8,6 +8,8 @@ import PagesHero from "../../Components/PagesHero/PagesHero";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ServiceSectionCard from "../../Components/ServiceSectionCard/ServiceSectionCard";
+import FormContact from "../../Components/FormContact/FormContact";
+import SeoComponnent from "../../Components/SeoComponnent/SeoComponnent";
 
 // Define the structure of the service, sections, and other related data
 interface Section {
@@ -73,11 +75,11 @@ const ServiceProfile = () => {
           {
             headers: {
               Accept: "application/json",
-              "Accept-Language": language, // Pass the current language to the request header
+              "Accept-Language": language, 
             },
           }
         );
-        setServiceData(response.data.data); // Set service data in state
+        setServiceData(response.data.data); 
         console.log("Service Data:", response.data.data);
       } catch (error) {
         console.error("Error fetching service details:", error);
@@ -85,60 +87,65 @@ const ServiceProfile = () => {
     };
 
     fetchServiceById();
-  }, [id, language]); // Refetch when id or language changes
+  }, [id, language]);
 
-  // Display loading state until the service data is available
   if (!serviceData) {
     return <p>{translations.loading}</p>;
   }
 
   return (
     <div className="ServiceProfile">
+      <SeoComponnent
+        title={`${translations.PearlSmileSeo} | ${serviceData?.title}`}
+        keyword={translations.blogKeySeo}
+        description={translations.blogDesSeo}
+        type="website"
+      />
       <PagesHero Hero_name={translations.services} hero_img={service} />
 
       <div className="service_Profile">
-      <div className="service_content_container">
-        {/* Safely check if doctor.image exists */}
-        <div className="img_doctor">
-          {serviceData.image ? (
-            <img
-              src={serviceData.image.path}
-              alt={serviceData.image.alt || "Doctor image"}
-            />
-          ) : (
-            <p>No image available</p> // Fallback if no image is available
-          )}
+        <div className="service_content_container">
+          <div className="img_doctor">
+            {serviceData.image ? (
+              <img
+                src={serviceData.image.path}
+                alt={serviceData.image.alt || "Doctor image"}
+              />
+            ) : (
+              <p>{translations.Noimageavailable}</p> 
+            )}
+          </div>
+          <div className="doctor_info_sec">
+            <h1 className="doctor_name">
+              {serviceData.title || "No name available"}
+            </h1>
+            <p className="service_resume">
+              {serviceData.description || "No resume available"}
+            </p>
+          </div>
         </div>
-        <div className="doctor_info_sec">
-          <h1 className="doctor_name">
-            {serviceData.title || "No name available"}
-          </h1>
-          <p className="service_resume">
-            {serviceData.description || "No resume available"}
-          </p>
-        </div>
-      </div>
-      <div className="service_sections_container">
         <div className="service_sections_container">
-          {serviceData.sections.length > 0 ? (
-            serviceData.sections.map((section) => {
-              console.log("Rendering section:", section); // Add a log to verify section rendering
-              return (
-                <ServiceSectionCard
-                  key={section.id}
-                  title={section.section_name}  // Corrected: Use section_name
-          description={section.description}  // Use description as it is
-                />
-              );
-            })
-          ) : (
-            <p>{translations.loading}</p>
-          )}
+          <div className="service_sections_container">
+            {serviceData.sections.length > 0 ? (
+              serviceData.sections.map((section) => {
+                console.log("Rendering section:", section);
+                return (
+                  <ServiceSectionCard
+                    key={section.id}
+                    title={section.section_name} 
+                    description={section.description}
+                  />
+                );
+              })
+            ) : (
+              <p>{translations.loading}</p>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="service_FAQ">
-        
-      </div>
+        <div className="service_Booking">
+          {/* Pass the service id to FormContact */}
+          <FormContact serviceId={id || ""} />
+        </div>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ const OurDoctorSection = () => {
   return (
     <div className="Our_Doctor_Card_Container">
           {doctors.length > 0 ? (
-            doctors.map((doctor) => (
+            doctors.slice(0, 3).map((doctor) => (
               <DoctorCard
                 key={doctor.id}
                 id={doctor.id} // Pass doctor ID to DoctorCard

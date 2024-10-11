@@ -1,5 +1,9 @@
+import { ReactNode } from "react";
+
 // types.ts
 export interface Translations {
+    SubscriptionError: string;
+    selectService: ReactNode;
     home: string;
     about: string;
     contact: string;
@@ -27,5 +31,37 @@ export interface Translations {
     noServicesAvailable:string;
     servicesName:string;
     servicePageTitle:string;
+    FooterTitle:string;
+    StayUptodate:string;
+    Tel:string;
+    SubscribeNow:string;
+    SubscriptionSuccess:string;
+    OfferPageText:string;
+    DoctorPageText:string;
+    FormName:string;
+    FormEmail:string;
+    FormPhone:string;
+    FormMessage:string;
+    FormService:string;
+    Submit:string;
+    Open:string;
+    PearlSmile:string;
+    MedicalCenter:string;
+    Address:string;
+    groundPhone:string;
+    readMore:string;
+    mediaGallery:string;
+    photos:string;
+    videos:string;
+    loadingVideo:string;
+    aboutTitleSeo:string;
+    aboutKeySeo:string;
+    aboutDesSEo:string;
+    blogTitleSeo:string;
+    blogKeySeo:string;
+    blogDesSeo:string;
+    PearlSmileSeo:string;
+    DoctorProfileDesSeo:string;
+    Noimageavailable:string;
   }
   

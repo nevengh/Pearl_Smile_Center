@@ -73,13 +73,19 @@
 }
 
 
-
-
-@media(max-width:580px){
+@media(max-width:780px){
     .Counter_cards_container{
         transform: translate(-50%,-30%);
         
     }
+}
+
+
+@media(max-width:580px){
+    /* .Counter_cards_container{
+        transform: translate(-50%,-30%);
+        
+    } */
     .Counter_card{
         width: 155.09px;
         height: 200.37px;

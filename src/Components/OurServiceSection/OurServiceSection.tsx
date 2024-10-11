@@ -49,6 +49,7 @@ const OurServiceSection = () => {
           {services.length > 0 ? (
             services
               .filter((service) => service.image !== null) // Filter out services with null image
+              .slice(0, 3)
               .map((service) => (
                 <ServicesCard
                   key={service.id}
