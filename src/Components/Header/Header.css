@@ -1,5 +1,6 @@
 /* General styles for the header */
 .ne_Header {
+  padding: 1rem .6rem!important;
   position: fixed;
   top: 0;
   left: 50%;
@@ -7,7 +8,7 @@
   width: 100%;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem 132px;
   background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for elegant effect */
@@ -128,13 +129,9 @@
 /* Responsive styles for smaller screens */
 
 
-@media (max-width: 1200px) {
-  .ne_Header{
-    padding: 1rem 1.2rem !important;
-  }
-  /* .ne_Header{
-    padding: 1rem 1.2rem;
-  } */
+@media (max-width: 1300px) {
+  
+
   .ne_nav_menu {
     display: none;
     flex-direction: column;

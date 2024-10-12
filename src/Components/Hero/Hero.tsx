@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useLanguage } from '../../LanguageContext';
 import en from '../../locales/en';
 import ar from '../../locales/ar';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -48,10 +49,10 @@ const Hero = () => {
                 <p className="carousel_text">{slide.text}</p>
                 <div className="carousel-buttons">
                   <div className="book_now_header">
-                    <button>{translations.contact}</button> {/* Translated button */}
+                    <Link to="/ContactUs"><button>{translations.contact}</button></Link>
                   </div>
                   <div className="book_now_header">
-                    <button>{translations.about}</button> {/* Translated button */}
+                    <Link to='/about-us'>{translations.about}</Link> 
                   </div>
                 </div>
               </div>

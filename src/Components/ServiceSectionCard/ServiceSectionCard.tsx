@@ -9,6 +9,7 @@ const ServiceSectionCard:React.FC<ServiceSectionCardProps> = ({title,description
     <div className='ServiceSectionCard'>
         <h1 className='ServiceSectionCard_title'>{title}</h1>
         <p className='ServiceSectionCard_text'>{description}</p>
+        
     </div>
   )
 }

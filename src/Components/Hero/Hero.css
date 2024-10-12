@@ -7,24 +7,33 @@
     flex-direction: column;
     width: 500px;
 }
-/* Add this to your Hero.css */
 
-/* General styling for the carousel container */
+.book_now_header a{
+  color: var(--primary_color);
+  text-decoration-thickness:2 ;
+  text-underline-offset: 10px;
+  font-size: 22px;
+  font-weight: 400;
+  transition: .3s all;
+}
+.book_now_header a:hover{
+  color: var(--white_color);
+}
+
 .carousel-image-overlay {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  /* Image covers the entire container */
+
   .carousel-image-overlay img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
   }
   
-  /* Gradient overlay */
+
   .carousel-image-overlay .overlay {
     position: absolute;
     top: 0;

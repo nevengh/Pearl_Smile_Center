@@ -16,7 +16,9 @@ const DoctorCard:React.FC<DoctorCardProps> = ({img_url,Doctor_Name,Doctor_sevice
   };
   return (
     <div className='DoctorCard' onClick={handleCardClick}>
-        <img src={img_url} alt={img_alt} />
+        <div className="DoctorCard_img">
+          <img src={img_url} alt={img_alt} />
+        </div>
         <h2>{Doctor_Name}</h2>
         <p>{Doctor_sevice} </p>
     </div>

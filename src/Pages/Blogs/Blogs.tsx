@@ -3,7 +3,7 @@ import "./Blogs.css";
 import { useLanguage } from "../../LanguageContext";
 import ar from "../../locales/ar";
 import en from "../../locales/en";
-import blogs from "../../assets/images/6.jpg";
+import blogs from "../../assets/images/blog.jpg";
 import BlogsCard from "../../Components/BlogsCard/BlogsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -79,7 +79,7 @@ const Blogs = () => {
             />
           ))
         ) : (
-          <p>{translations.loading}</p>
+          <p>{translations.loadingBlog}</p>
         )}
       </div>
     </div>

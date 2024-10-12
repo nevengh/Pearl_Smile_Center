@@ -2,14 +2,21 @@
     padding: 13.16px 12.92px;
     border-radius: 15.43px;
     background: var(--primary_color);
-    width: 200.06px;
-    height: 300px;
+    width: 250.06px;
+    height: 320px;
     cursor: pointer;
+}
+.DoctorCard_img{
+    height: 189px;
+    width: 169px;
+    margin: 0 auto;
 }
 .DoctorCard img{
     width: 100%;
+    height: 100%;
     border-radius: 15.8px;
     margin: 0 auto;
+    object-fit: cover;
 }
 .DoctorCard h2{
     margin-top: 13.51px;

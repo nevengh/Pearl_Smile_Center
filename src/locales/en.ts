@@ -62,6 +62,7 @@ const en: Translations = {
   PearlSmileSeo:"Pearl Smile",
   DoctorProfileDesSeo:"Doctor Profile Pearl Smile Doctors All specialized Years Of experience",
   Noimageavailable:"No image available",
+  loadingBlog:"loading Blog ....",
   
 };
 

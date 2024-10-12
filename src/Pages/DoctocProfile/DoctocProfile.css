@@ -59,10 +59,12 @@
 
 }
 .doctor_services_title{
-    line-height: 76.8px;
+    line-height: 56.8px;
     font-size: 64px;
-    font-family: var(--heading_font);
+    font-family: var(--text_font);
+    font-weight: 600;
     color: var(--primary_color);
+    line-height: 90px;
 }
 
 .video iframe{

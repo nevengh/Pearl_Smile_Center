@@ -62,7 +62,8 @@ const ar: Translations = {
   PearlSmileSeo:"بيرل سمايل",
   DoctorProfileDesSeo:"هذه الصفحة تعرض الملف الشخصي لاطباء مركز بيرل سمايل ",
   Noimageavailable:"لا يتوفر صور",
-  
+  loadingBlog:"...جاري تحميل المقالات",
+
 };
 
 export default ar;

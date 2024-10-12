@@ -47,7 +47,7 @@ const BlogsProfile = () => {
     };
 
     fetchBlogById();
-  }, [id, language]); // Refetch when id or language changes
+  }, [id, language]);
   return (
     <div className="BlogsProfile">
       <SeoComponnent
@@ -70,7 +70,7 @@ const BlogsProfile = () => {
               alt={blogData.image.alt || "Doctor image"}
             />
           ) : (
-            <p>No image available</p> // Fallback if no image is available
+            <p>{translations.Noimageavailable}</p>
           )}
         </div>
         <div className="doctor_info_sec">
@@ -78,13 +78,10 @@ const BlogsProfile = () => {
             {blogData?.title || "No name available"}
           </h1>
           <p className="blogs_tags">{blogData?.tags}</p>
-          {/* <p className="service_resume">
-            {blogData?.description || "No resume available"}
-          </p> */}
+
         </div>
         </div>
         <div className="blogs_description">
-            {/* {blogData?.description} */}
             <ReactMarkdown>
              {blogData?.description|| "No description available"} 
             </ReactMarkdown>

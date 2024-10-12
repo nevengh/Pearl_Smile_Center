@@ -63,6 +63,7 @@ export interface Translations {
     PearlSmileSeo:string;
     DoctorProfileDesSeo:string;
     Noimageavailable:string;
+    loadingBlog:string;
     
   }
   
