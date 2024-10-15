@@ -67,7 +67,7 @@ const OffersPage = () => {
           {offers.length > 0 ? (
             offers.map(
               (
-                offer // Limit to 3 offers
+                offer 
               ) => (
                 <OffersCard
                   key={offer.id}

@@ -4,12 +4,49 @@ import en from '../../locales/en'
 import ar from '../../locales/ar'
 import PagesHero from '../../Components/PagesHero/PagesHero'
 import team from '../../assets/images/ourTeam.png'
-import OurDoctorSection from '../../Components/OurDoctorSection/OurDoctorSection'
 import SectionHeader from '../../Components/SectionHeader/SectionHeader'
 import SeoComponnent from '../../Components/SeoComponnent/SeoComponnent'
+import axios from 'axios';
+import { useEffect, useState } from 'react'
+import DoctorCard from '../../Components/DoctorCard/DoctorCard'
+
+interface Doctor {
+    specializations: string;
+    id: number;
+    name: string;
+    image: {
+      id: number;
+      path: string;
+      alt: string;
+    };
+    specialization: string;
+  }
 const DoctorsPage = () => {
     const { language } = useLanguage();
     const translations = language === 'ar' ? ar : en;
+    const [doctors, setDoctors] = useState<Doctor[]>([]);
+
+    useEffect(() => {
+      const fetchDoctors = async () => {
+        try {
+          const response = await axios.get<{ data: Doctor[] }>(
+            "http://127.0.0.1:8000/api/specialties-slider",
+            {
+              headers: {
+                "Accept-Language": language,
+                Accept: "application/json",
+              },
+            }
+          );
+          setDoctors(response.data.data); // Set the doctors in state
+          console.log("Doctors", response.data.data);
+        } catch (error) {
+          console.error("Error fetching doctors:", error);
+        }
+      };
+  
+      fetchDoctors();
+    }, [language]);
   return (
     <div className='DoctorsPage'>
       <SeoComponnent
@@ -21,7 +58,22 @@ const DoctorsPage = () => {
         <PagesHero Hero_name={translations.doctors} hero_img={team}  />
         <p className="About_us_home_text">{translations.DoctorPageText}</p>
         <SectionHeader title={translations.MeetOurSpecialists} />
-        <OurDoctorSection/>
+        <div className="Our_Doctor_Card_Container">
+          {doctors.length > 0 ? (
+            doctors.map((doctor) => (
+              <DoctorCard
+                key={doctor.id}
+                id={doctor.id} // Pass doctor ID to DoctorCard
+                img_url={doctor.image.path} // Use path for doctor image
+                Doctor_Name={doctor.name} // Use doctor name
+                img_alt={doctor.image.alt} // Use alt text
+                Doctor_sevice={doctor.specializations} // Use doctor specialization
+              />
+            ))
+          ) : (
+            <p>{translations.loading}</p> // Handle empty state or loading
+          )}
+        </div>
 
     </div>
   )

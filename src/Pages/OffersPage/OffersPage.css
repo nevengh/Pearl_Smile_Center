@@ -1,3 +1,9 @@
 .Offer_page_sec{
     margin-top: 142px;
 }
+
+.OffersPage .Our_Offers_Cards_container{
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 80px auto;
+}

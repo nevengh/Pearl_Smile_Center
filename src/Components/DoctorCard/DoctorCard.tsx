@@ -1,18 +1,23 @@
-import { useNavigate } from 'react-router-dom';
-import './DoctorCard.css'
-interface DoctorCardProps{
-    img_url:string;
-    Doctor_Name:string;
-    Doctor_sevice:string;
-    img_alt:string;
-    id: number; 
+import { useNavigate } from "react-router-dom";
+import "./DoctorCard.css";
+interface DoctorCardProps {
+  img_url: string;
+  Doctor_Name: string;
+  Doctor_sevice: string;
+  img_alt: string;
+  id: number;
 }
-const DoctorCard:React.FC<DoctorCardProps> = ({img_url,Doctor_Name,Doctor_sevice,img_alt,id}) => {
-    const navigate = useNavigate();
-
+const DoctorCard: React.FC<DoctorCardProps> = ({
+  img_url,
+  Doctor_Name,
+  Doctor_sevice,
+  img_alt,
+  id,
+}) => {
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/doctor/${id}`); 
+    navigate(`/doctor/${id}`);
   };
   return (
     <div className='DoctorCard' onClick={handleCardClick}>
@@ -22,7 +27,8 @@ const DoctorCard:React.FC<DoctorCardProps> = ({img_url,Doctor_Name,Doctor_sevice
         <h2>{Doctor_Name}</h2>
         <p>{Doctor_sevice} </p>
     </div>
-  )
-}
 
-export default DoctorCard
+  );
+};
+
+export default DoctorCard;

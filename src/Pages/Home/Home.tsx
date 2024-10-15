@@ -151,10 +151,6 @@ const Home = () => {
           Link_Name={translations.SeeOurDoctors}
         />
       </div>
-      {/* Form Section */}
-      <div className="Form_Home">
-        <FormContact serviceId="" />
-      </div>
       {/* Gallery Section */}
       <div className="gallery_home">
         
@@ -163,6 +159,11 @@ const Home = () => {
           <PageLinkBtn Page_Url="/gallery" Link_Name={translations.mediaGallery} />
         </div>
       </div>
+      {/* Form Section */}
+      <div className="Form_Home">
+        <FormContact serviceId="" />
+      </div>
+      
     </div>
   );
 };
