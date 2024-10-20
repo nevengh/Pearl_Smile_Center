@@ -35,6 +35,22 @@
     margin: 81px auto;
 
 }
+.faq_section,.service_offer,.service_doctors{
+    margin-top: 50px;
+}
+.faq_item{
+    margin-bottom: 30px;
+}
+.faq_head,.service_offer_head,.service_doctors_head{
+    color: var(--primary_color);
+  font-family: var(--heading_font);
+  margin-bottom: 40px;
+}
+.offers_con_service{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
 @media(max-width:620px){
     .service_Profile{

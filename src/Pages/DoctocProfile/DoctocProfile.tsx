@@ -56,7 +56,7 @@ const DoctorProfile = () => {
   useEffect(() => {
     const fetchDoctorById = async () => {
       try {
-        const response = await axios.get<{ data: Doctor }>(`http://127.0.0.1:8000/api/specialists/${id}`, {
+        const response = await axios.get<{ data: Doctor }>(`https://ahmedballeh.com/dashboard/api/specialists/${id}`, {
           headers: {
             'Accept': 'application/json',
             'Accept-Language': language, // Pass the current language to the request header

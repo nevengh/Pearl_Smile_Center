@@ -137,6 +137,7 @@ margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: start;
+    height: 100px;
     gap: 12px;
   }
   .phone_number{
@@ -151,10 +152,13 @@ margin-top: 200px;
     color: var(--primary_color);
     margin: 0;
     padding: 0;
-    display: block; /* Ensure each link takes up the full width */
-  margin-bottom: 5px; /* Add some space between each number */
-  color: var(--primary_color); /* Use your primary color for links */
-  text-decoration: none; /* Remove underline */
+    display: block; 
+  margin-bottom: 5px; 
+  color: var(--primary_color); 
+  text-decoration: none;
+  }
+  .mobilee_numberss{
+    color: var(--primary_color);
   }
   .mobile_number:hover {
     text-decoration: underline; /* Optional: Add underline on hover */

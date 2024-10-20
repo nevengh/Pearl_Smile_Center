@@ -32,7 +32,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get<{ data: Blog[] }>("http://127.0.0.1:8000/api/blogs", {
+        const response = await axios.get<{ data: Blog[] }>("https://ahmedballeh.com/dashboard/api/blogs", {
           headers: {
             "Accept": "application/json",
             "Accept-Language": language, // Pass language to fetch the correct blog translations

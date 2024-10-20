@@ -29,7 +29,7 @@ const OurDoctorSection = () => {
     const fetchDoctors = async () => {
       try {
         const response = await axios.get<{ data: Doctor[] }>(
-          "http://127.0.0.1:8000/api/specialties-slider",
+          "https://ahmedballeh.com/dashboard/api/specialties-slider",
           {
             headers: {
               "Accept-Language": language,

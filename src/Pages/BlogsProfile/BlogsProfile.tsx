@@ -32,7 +32,7 @@ const BlogsProfile = () => {
     const fetchBlogById = async () => {
       try {
         const response = await axios.get<{ data: Blog }>(
-          `http://127.0.0.1:8000/api/blogs/${id}`,
+          `https://ahmedballeh.com/dashboard/api/blogs/${id}`,
           {
             headers: {
               Accept: "application/json",

@@ -128,10 +128,20 @@
 
 /* Responsive styles for smaller screens */
 
+/* Adjust the language select inside the nav menu */
+.language_btn_in_menu select {
+  border: none;
+  background-color: transparent;
+  color: var(--black_color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--heading_font);
+
+}
 
 @media (max-width: 1300px) {
-  
-
   .ne_nav_menu {
     display: none;
     flex-direction: column;
@@ -151,7 +161,14 @@
   .ne_nav_links {
     margin: 10px 0;
   }
+
+  /* Adjust for the language select inside the burger menu */
+  .language_btn_in_menu {
+    margin: 10px 0;
+  }
 }
+
+
 /* Dropdown styles for services */
 /* .services_link {
   position: relative;
@@ -255,9 +272,7 @@
     font-size: 1rem;
     padding: 0.8rem 0;
   }
-}
-@media(max-width:540px){
-  .header_buttons{
+  .book_now_header{
     display: none;
   }
 }

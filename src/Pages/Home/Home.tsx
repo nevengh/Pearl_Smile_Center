@@ -50,7 +50,8 @@ const Home = () => {
     const fetchAbout = async () => {
       try {
         const response = await axios.get<{ data: AboutData }>(
-          "http://127.0.0.1:8000/api/about-us",
+          // "http://127.0.0.1:8000/api/about-us",
+          "https://ahmedballeh.com/dashboard/api/about-us",
           {
             headers: {
               "Accept-Language": language,
@@ -74,7 +75,7 @@ const Home = () => {
     const fetchOffers = async () => {
       try {
         const response = await axios.get<{ data: Offer[] }>(
-          "http://127.0.0.1:8000/api/offers",
+          "https://ahmedballeh.com/dashboard/api/offers",
           {
             headers: {
               "Accept-Language": language,
@@ -147,7 +148,7 @@ const Home = () => {
         <SectionHeader title={translations.MeetOurSpecialists} />
         <OurDoctorSection />
         <PageLinkBtn
-          Page_Url="/doctor"
+          Page_Url="/our-team"
           Link_Name={translations.SeeOurDoctors}
         />
       </div>

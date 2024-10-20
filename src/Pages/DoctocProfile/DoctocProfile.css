@@ -75,3 +75,56 @@
     justify-content: center;
     align-items: center;
 }
+@media(max-width:1100px){
+    .doctor_name {
+        font-size: 36px;
+        line-height: 44.8px;
+        color: var(--primary_color);
+        font-family: var(--heading_font);
+        text-align: center !important;
+      }
+      .service_resume{
+        font-size: 20px;
+        font-family: var(--text_font);
+        line-height: 27.6px;
+        color: var(--black_color);
+        text-align: start;
+        max-width: 582px;
+        text-align:center !important;
+    }
+    .doctor_resume{
+        font-size: 20px;
+        font-family: var(--text_font);
+        line-height: 27.6px;
+        color: var(--black_color);
+        text-align: center !important;
+        max-width: 682px;
+    }
+    .doctor_spec{text-align: center !important;}
+}
+
+@media(max-width:767px){
+    .doctor_services_title {
+        line-height: 56.8px;
+        font-size: 42px;
+        font-family: var(--text_font);
+        font-weight: 600;
+        color: var(--primary_color);
+        line-height: 49px;
+      }
+      .doctor_services{
+        padding: 24px 50px;
+      }
+      
+}
+@media(max-width:520px){
+    .doctor_services_title {
+        line-height: 56.8px;
+        font-size: 30px;
+        font-family: var(--text_font);
+        font-weight: 600;
+        color: var(--primary_color);
+        line-height: 49px;
+      }
+      
+}

@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 // types.ts
 export interface Translations {
+  English:string;
+  Arabic:string;
     SubscriptionError: string;
     selectService: ReactNode;
     home: string;
@@ -64,6 +66,10 @@ export interface Translations {
     DoctorProfileDesSeo:string;
     Noimageavailable:string;
     loadingBlog:string;
-    
+    noFaqAvailable:string;
+    faq_head:string;
+    service_offer_head:string;
+    service_doctor_head:string;
   }
+
   

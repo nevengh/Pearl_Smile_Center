@@ -44,27 +44,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20.56px;
+    gap: 0;
     background: var(--primary_color);
     padding-top: 10px;
     padding-bottom: 52px;
     
 }
-.Counter_Number{
+.Counter_Number {
     font-family: var(--heading_font);
-    font-size: 116.2px;
+    font-size: 98.2px;
     font-weight: 700;
     line-height: 141.44px;
-    color: rgba(178, 144, 41, 1);
+    color: #b29029;
     position: relative;
-}
-.Counter_Number span{
+  }
+.Counter_Number span {
     position: absolute;
-    top: -20%;
+    top: -13%;
     font-size: 40px;
-}
+  }
 .Counter_Card_text{
-    font-size: 25.24px;
+    font-size: 20.2px;
     font-family: var(--heading_font);
     font-weight: 700;
     line-height: 30.29px;

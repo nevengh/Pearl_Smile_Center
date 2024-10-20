@@ -30,7 +30,8 @@ const ServicesPage = () => {
     const fetchServices = async () => {
       try {
         const response = await axios.get<{ data: Service[] }>(
-          "http://127.0.0.1:8000/api/servicses-slider",
+          "https://ahmedballeh.com/dashboard/api/servicses-slider",
+          // "http://127.0.0.1:8000/api/servicses-slider",
           {
             headers: {
               "Accept-Language": language,
@@ -39,6 +40,8 @@ const ServicesPage = () => {
           }
         );
         setServices(response.data.data); 
+        console.log('all-services',response.data.data);
+        
       } catch (error) {
         console.error("Error fetching services:", error);
       }

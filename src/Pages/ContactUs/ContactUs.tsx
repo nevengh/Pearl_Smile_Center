@@ -37,7 +37,7 @@ const ContactUs = () => {
      const fetchContactInfo = async () => {
        try {
          const response = await axios.get<{ data: ContactInfo }>(
-           "http://127.0.0.1:8000/api/contacts-info",
+           "https://ahmedballeh.com/dashboard/api/contacts-info",
            {
              headers: {
                Accept: "application/json",
@@ -54,7 +54,7 @@ const ContactUs = () => {
  
      fetchContactInfo();
    }, [language]); // Refetch contact information when language changes
-   const map = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.0609464668028!2d55.36490247494584!3d25.302156327442166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5c785ad1227b%3A0x4b873618560e813d!2sQamar%20Al%20Kassadi%20Advocates%20%26%20Legal%20Consultants!5e0!3m2!1sen!2s!4v1723213060571!5m2!1sen!2s"
+   const map = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.4128595675497!2d55.3807487!3d25.323923500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bd48e07b16f%3A0x9bc425fdc12d5e73!2sPearl%20Smile%20Medical%20Center!5e0!3m2!1sen!2sus!4v1729205944891!5m2!1sen!2sus"
   return (
     <div className='ContactUs'>
       <SeoComponnent

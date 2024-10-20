@@ -23,7 +23,7 @@ interface ContactInfo {
   instegram_link: string;
   tiktok_link: string;
   phone_number: string;
-  mobile_numbers: string[];
+  mobile_numbers: string;
   whatsapp: string;
   address_en: string;
   address_ar: string;
@@ -40,7 +40,7 @@ const Footer = () => {
     const fetchContactInfo = async () => {
       try {
         const response = await axios.get<{ data: ContactInfo }>(
-          "http://127.0.0.1:8000/api/contacts-info",
+          "https://ahmedballeh.com/dashboard/api/contacts-info",
           {
             headers: {
               Accept: "application/json",
@@ -50,6 +50,7 @@ const Footer = () => {
         );
         setContactInfo(response.data.data); 
         console.log("contact-info", response.data.data);
+        console.log("mobile_numbers:", response.data.data.mobile_numbers);
       } catch (error) {
         console.error("Error fetching contact information:", error);
       }
@@ -88,36 +89,36 @@ const Footer = () => {
           <img src={phone} alt="Phone Icon" />
           <div className="phone_info">
             <p className="Tel">{translations.Tel}</p>
-            {/* Render mobile numbers */}
-            {Array.isArray(contactInfo?.mobile_numbers) && contactInfo?.mobile_numbers.length > 0 ? (
-              contactInfo.mobile_numbers.map((number, index) => (
-                <a key={index} href={`tel:${number}`} className="mobile_number">
-                  {number}
-                </a> 
-              ))
-            ) : (
-              <p>No phone numbers available</p>
-            )}
+            
+            {contactInfo?.mobile_numbers ? (
+      contactInfo.mobile_numbers.split(',').map((number, index) => (
+        <p key={index} className="mobilee_numberss">
+          {number.trim()} 
+        </p>
+      ))
+    ) : (
+      <p style={{color:'rgba(230, 203, 126, 1)'}}>No phone numbers available</p>
+    )}
           </div>
         </div>
         <div className="contact_info_con">
           <img src={mail} alt="Phone Icon" />
           <div className="phone_info">
-            <p className="Tel">Mail</p>
+            <p className="Tel">{translations.FormEmail}</p>
             <p className="phone_number">{contactInfo?.email}</p>
           </div>
         </div>
         <div className="contact_info_con">
           <img src={Address} alt="Phone Icon" />
           <div className="phone_info">
-            <p className="Tel">Address</p>
+            <p className="Tel">{translations.Address}</p>
             <p className="phone_number">{language === "ar" ? contactInfo?.address_ar : contactInfo?.address_en}</p>
           </div>
         </div>
         <div className="contact_info_con">
           <img src={Ground_Phone} alt="Phone Icon" />
           <div className="phone_info">
-            <p className="Tel">Phone</p>
+            <p className="Tel">{translations.groundPhone}</p>
             <p className="phone_number">{contactInfo?.phone_number}</p>
           </div>
         </div>

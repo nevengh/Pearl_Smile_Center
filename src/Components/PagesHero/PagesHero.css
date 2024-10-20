@@ -18,12 +18,28 @@ background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%
 .Pages_Hero h1{
     position: absolute;
     z-index: 3;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-70%);
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
     font-size: 94px;
     line-height: 112.8px;
     font-family: var(--heading_font);
     color: var(--primary_color);
     text-align: center;
+}
+
+
+@media(max-width:767px){
+    .Pages_Hero h1 {
+        position: absolute;
+        z-index: 3;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-70%);
+        font-size: 71px;
+        line-height: 84.8px;
+        font-family: var(--heading_font);
+        color: var(--primary_color);
+        text-align: center;
+      }
 }

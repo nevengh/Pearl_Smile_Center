@@ -63,6 +63,12 @@ const ar: Translations = {
   DoctorProfileDesSeo:"هذه الصفحة تعرض الملف الشخصي لاطباء مركز بيرل سمايل ",
   Noimageavailable:"لا يتوفر صور",
   loadingBlog:"...جاري تحميل المقالات",
+Arabic:"عربي",
+English:"انكليزي",
+noFaqAvailable:"لا يوجد اسئلة ",
+faq_head:"أسئلة متكررة تسألها",
+service_offer_head:"عروض",
+service_doctor_head:"أطباء",
 
 };
 

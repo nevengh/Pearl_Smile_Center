@@ -21,3 +21,24 @@
 .blogs_description{
     margin-top: 100px;
 }
+
+
+@media(max-width:1418px){
+    .BlogsProfile .blogs_tags {
+    color: var(--primary_color);
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+}
+
+@media(max-width:767px){
+    .BlogsProfile .doctor_info_sec .doctor_name {
+    max-width: 499px;
+  }
+  
+}

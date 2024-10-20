@@ -63,6 +63,12 @@ const en: Translations = {
   DoctorProfileDesSeo:"Doctor Profile Pearl Smile Doctors All specialized Years Of experience",
   Noimageavailable:"No image available",
   loadingBlog:"loading Blog ....",
+  English:"English",
+  Arabic:"Arabic",
+  noFaqAvailable:"no Faq Available",
+  faq_head:"Frequently Asked Questions :",
+  service_offer_head:"Offers",
+  service_doctor_head:"Doctors",
   
 };
 

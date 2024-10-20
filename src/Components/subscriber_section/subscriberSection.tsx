@@ -22,14 +22,14 @@ const SubscriberSection = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/subscriber', {
+      const response = await axios.post('https://ahmedballeh.com/dashboard/api/subscriber', {
         email: email, // Send the email from state
       });
 
       if (response.status === 201) {
-        setMessage(translations.SubscriptionSuccess); // Set success message
+        setMessage(translations.SubscriptionSuccess);
         console.log("Subscription successful:", response.data);
-        setEmail(''); // Clear the input field after successful submission
+        setEmail(''); 
         console.log("Email input cleared");
       } else {
         console.log("Unexpected response:", response);
@@ -56,7 +56,7 @@ const SubscriberSection = () => {
           {translations.SubscribeNow}
         </span>
       </div>
-        {message && <p className='message_success'>{message}</p>} {/* Display success or error message */}
+        {message && <p className='message_success'>{message}</p>}
     </div>
   );
 };
