@@ -101,6 +101,14 @@
         max-width: 682px;
     }
     .doctor_spec{text-align: center !important;}
+    .DoctocProfile .video iframe {
+        margin: 80px auto;
+        width: 100%;
+        height: 507px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 }
 
 @media(max-width:767px){

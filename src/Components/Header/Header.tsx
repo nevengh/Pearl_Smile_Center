@@ -56,6 +56,8 @@ const Header = () => {
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLanguage(e.target.value as 'en' | 'ar');
+    setIsMenuOpen(false); // Close the menu after changing the language
+    setIsServicesOpen(false); // Close the services dropdown as well
   };
 
   const handleServiceClick = (serviceId: number) => {

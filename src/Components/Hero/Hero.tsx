@@ -1,7 +1,13 @@
+import  { useState, useEffect } from 'react';
 import "./Hero.css";
 import slide1 from "../../assets/images/1.png";
 import slide2 from "../../assets/images/2.png";
 import slide3 from "../../assets/images/3.png";
+import slide4 from '../../assets/images/4.jpg';
+import mobileSlide1 from '../../assets/images/1-1.jpg';
+import mobileSlide2 from '../../assets/images/2-1.jpg';
+import mobileSlide3 from '../../assets/images/3-1.jpg';
+import mobileSlide4 from '../../assets/images/4-1.jpg';
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useLanguage } from '../../LanguageContext';
@@ -13,24 +19,44 @@ const Hero = () => {
   const { language } = useLanguage();
   const translations = language === 'ar' ? ar : en;
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 540);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 540);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const slides = [
     {
       id: 1,
-      image: slide1,
-      title: translations.slideTitle, // From translation files
-      text: translations.slideText, // Add slide text in the translation files
+      image: isMobile ? mobileSlide1 : slide1,
+      title: translations.slideTitle,
+      text: translations.slideText,
     },
     {
       id: 2,
-      image: slide2,
-      title: translations.slideTitle, // Second slide title from translations
-      text: translations.slideText, // Add text for the second slide
+      image: isMobile ? mobileSlide2 : slide2,
+      title: translations.slideTitle,
+      text: translations.slideText,
     },
     {
       id: 3,
-      image: slide3,
-      title: translations.slideTitle, // Third slide title from translations
-      text: translations.slideText, // Add text for the third slide
+      image: isMobile ? mobileSlide3 : slide3,
+      title: translations.slideTitle,
+      text: translations.slideText,
+    },
+    {
+      id: 4,
+      image: isMobile ? mobileSlide4 : slide4,
+      title: translations.slideTitle,
+      text: translations.slideText,
     },
   ];
 

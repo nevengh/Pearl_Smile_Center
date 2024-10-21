@@ -3,7 +3,6 @@ import logo from "../../assets/images/Logo.svg";
 import instagram from "../../assets/images/icons/instagram.svg";
 import Facebook from "../../assets/images/icons/facebook.svg";
 import Whatsapp from "../../assets/images/icons/whatsapp.svg";
-import Tiktok from "../../assets/images/icons/tiktok.svg";
 import phone from "../../assets/images/icons/phoneicon.svg";
 import mail from "../../assets/images/icons/mailicon.svg";
 import Address from "../../assets/images/icons/LocationIcon.svg";
@@ -75,9 +74,6 @@ const Footer = () => {
             </a>
             <a href={contactInfo?.whatsapp}>
               <img src={Whatsapp} alt="Whatsapp Icons" />
-            </a>
-            <a href={contactInfo?.tiktok_link}>
-              <img src={Tiktok} alt="Tiktok Icons" />
             </a>
           </div>
         </div>

@@ -28,7 +28,7 @@ const ar: Translations = {
   noServicesAvailable: "لا يوجد خدمات متاحة..",
   servicesName: "خدمات",
   servicePageTitle: "نقدم كافة الخدمات الصحية والتجميلية بما في ذلك كافة الأقسام الطبية لكافة أفراد العائلة سواء كنت تبحث عن العناية بالبشرة أو الاستشارة الطبية المتخصصة أو الخدمات التجميلية المتكاملة",
-  FooterTitle: "Contact us to book your medical and cosmetic services.",
+  FooterTitle: "اتصل بنا طه احجز موعدك الطبي في خدمات التجميل.",
   StayUptodate: "ابقى على اطلاع",
   Tel: "رقم الموبايل",
   SubscribeNow: "اشترك الآن",
