@@ -22,7 +22,7 @@ const SubscriberSection = () => {
     }
 
     try {
-      const response = await axios.post('https://ahmedballeh.com/dashboard/api/subscriber', {
+      const response = await axios.post('http://127.0.0.1:8000/api/subscriber', {
         email: email, // Send the email from state
       });
 

@@ -84,7 +84,7 @@ const ServiceProfile = () => {
     const fetchServiceById = async () => {
       try {
         const response = await axios.get<{ data: Service }>(
-          `https://ahmedballeh.com/dashboard/api/service-info/${id}`,
+          `http://127.0.0.1:8000/api/service-info/${id}`,
           {
             headers: {
               Accept: "application/json",

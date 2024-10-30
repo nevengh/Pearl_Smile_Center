@@ -5,7 +5,10 @@
   margin:0;
   box-sizing:border-box;
 }
-
+a{
+  text-decoration: none;
+  color: var(--black_color);
+}
 :root{
   --secondary_color:rgba(66, 52, 9, 1);
   --primary_color:rgba(230, 203, 126, 1);

@@ -11,8 +11,10 @@
 }
 
 @media(max-width:520px){
-    .SectionHeader h1{
-        font-size: 45px;
-        
-    }
+   
+    .SectionHeader h1 {
+        font-size: 34px;
+        text-decoration: none;
+      }
+      
 }

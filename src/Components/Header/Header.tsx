@@ -38,7 +38,7 @@ const Header = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get<{ data: Service[] }>('https://ahmedballeh.com/dashboard/api/services-names', {
+        const response = await axios.get<{ data: Service[] }>('http://127.0.0.1:8000/api/services-names', {
           headers: {
             'Accept-Language': language,
             'Accept': 'application/json',

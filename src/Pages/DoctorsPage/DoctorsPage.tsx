@@ -30,7 +30,7 @@ const DoctorsPage = () => {
       const fetchDoctors = async () => {
         try {
           const response = await axios.get<{ data: Doctor[] }>(
-            "https://ahmedballeh.com/dashboard/api/specialties-slider",
+            "http://127.0.0.1:8000/api/specialties-slider",
             {
               headers: {
                 "Accept-Language": language,
@@ -58,7 +58,7 @@ const DoctorsPage = () => {
         <PagesHero Hero_name={translations.doctors} hero_img={team}  />
         <p className="About_us_home_text">{translations.DoctorPageText}</p>
         <SectionHeader title={translations.MeetOurSpecialists} />
-        <div className="Our_Doctor_Card_Container">
+        <div className="Our_Doctor_Card_Container_pages">
           {doctors.length > 0 ? (
             doctors.map((doctor) => (
               <DoctorCard

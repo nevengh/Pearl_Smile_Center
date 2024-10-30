@@ -37,7 +37,7 @@ const ContactUs = () => {
      const fetchContactInfo = async () => {
        try {
          const response = await axios.get<{ data: ContactInfo }>(
-           "https://ahmedballeh.com/dashboard/api/contacts-info",
+           "http://127.0.0.1:8000/api/contacts-info",
            {
              headers: {
                Accept: "application/json",

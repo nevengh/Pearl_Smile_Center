@@ -34,7 +34,7 @@ const OffersPage = () => {
     const fetchOffers = async () => {
       try {
         const response = await axios.get<{ data: Offer[] }>(
-          "https://ahmedballeh.com/dashboard/api/offers",
+          "http://127.0.0.1:8000/api/offers",
           {
             headers: {
               "Accept-Language": language,

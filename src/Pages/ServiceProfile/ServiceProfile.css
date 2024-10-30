@@ -51,9 +51,26 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+.faq_answer{
+    width: 60% !important;
+}
+.service_Profile .FormContact form {
+    width: 74%;
+    background-color: var(--white_color);
+    border-radius: 25px;
+    padding: 38px 45px;
+    box-shadow: 0 4px 10px #00000040;
+    margin: 0 auto;
+  }
 
 @media(max-width:620px){
     .service_Profile{
         width: 100%;
     }
+}
+@media(max-width:520px){
+    .faq_answer{
+        width: 90% !important;
+    }
+    
 }

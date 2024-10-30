@@ -36,19 +36,19 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      image: isMobile ? mobileSlide1 : slide1,
+      image: isMobile ?  mobileSlide2 : slide2,
       title: translations.slideTitle,
       text: translations.slideText,
     },
     {
       id: 2,
-      image: isMobile ? mobileSlide2 : slide2,
+      image: isMobile ? mobileSlide3 :  slide3,
       title: translations.slideTitle,
       text: translations.slideText,
     },
     {
       id: 3,
-      image: isMobile ? mobileSlide3 : slide3,
+      image: isMobile ? mobileSlide1 :slide1 ,
       title: translations.slideTitle,
       text: translations.slideText,
     },

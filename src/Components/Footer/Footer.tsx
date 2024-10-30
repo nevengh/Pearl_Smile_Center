@@ -30,7 +30,7 @@ interface ContactInfo {
 const Footer = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
-  
+
   // State to store contact information
   const [contactInfo, setContactInfo] = useState<ContactInfo | null>(null);
 
@@ -39,15 +39,15 @@ const Footer = () => {
     const fetchContactInfo = async () => {
       try {
         const response = await axios.get<{ data: ContactInfo }>(
-          "https://ahmedballeh.com/dashboard/api/contacts-info",
+          "http://127.0.0.1:8000/api/contacts-info",
           {
             headers: {
               Accept: "application/json",
-              "Accept-Language": language, 
+              "Accept-Language": language,
             },
           }
         );
-        setContactInfo(response.data.data); 
+        setContactInfo(response.data.data);
         console.log("contact-info", response.data.data);
         console.log("mobile_numbers:", response.data.data.mobile_numbers);
       } catch (error) {
@@ -56,7 +56,7 @@ const Footer = () => {
     };
 
     fetchContactInfo();
-  }, [language]); 
+  }, [language]);
 
   return (
     <div className="Footer">
@@ -78,23 +78,25 @@ const Footer = () => {
           </div>
         </div>
 
-        <SubscriberSection/>
+        <SubscriberSection />
       </div>
       <div className="contact_info">
         <div className="contact_info_con">
           <img src={phone} alt="Phone Icon" />
           <div className="phone_info">
             <p className="Tel">{translations.Tel}</p>
-            
+
             {contactInfo?.mobile_numbers ? (
-      contactInfo.mobile_numbers.split(',').map((number, index) => (
-        <p key={index} className="mobilee_numberss">
-          {number.trim()} 
-        </p>
-      ))
-    ) : (
-      <p style={{color:'rgba(230, 203, 126, 1)'}}>No phone numbers available</p>
-    )}
+              contactInfo.mobile_numbers.split(",").map((number, index) => (
+                <a key={index} href={`tel:${number.trim()}`}>
+                  <p className="mobilee_numberss">{number.trim()}</p>
+                </a>
+              ))
+            ) : (
+              <p style={{ color: "rgba(230, 203, 126, 1)" }}>
+                No phone numbers available
+              </p>
+            )}
           </div>
         </div>
         <div className="contact_info_con">
@@ -108,14 +110,23 @@ const Footer = () => {
           <img src={Address} alt="Phone Icon" />
           <div className="phone_info">
             <p className="Tel">{translations.Address}</p>
-            <p className="phone_number">{language === "ar" ? contactInfo?.address_ar : contactInfo?.address_en}</p>
+            <a href="https://maps.app.goo.gl/NotgTvWUJE2Lvo919"
+             target="_blank"
+            >
+            <p className="phone_number">
+              {language === "ar"
+                ? contactInfo?.address_ar
+                : contactInfo?.address_en}
+            </p>
+            </a>
+            
           </div>
         </div>
         <div className="contact_info_con">
           <img src={Ground_Phone} alt="Phone Icon" />
           <div className="phone_info">
             <p className="Tel">{translations.groundPhone}</p>
-            <p className="phone_number">{contactInfo?.phone_number}</p>
+            <a href="tel:+97165350887"><p className="phone_number">{contactInfo?.phone_number}</p></a>
           </div>
         </div>
       </div>

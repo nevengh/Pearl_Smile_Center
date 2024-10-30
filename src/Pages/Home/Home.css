@@ -37,6 +37,7 @@
 
 /* Our Services */
 .Our_Services_home{
+    padding: 20px 0;
     margin-top: 41px;
     display: flex;
     flex-direction: column;
@@ -104,4 +105,17 @@
     gap: 30px;
     margin: 60px auto;
     width: 80%;
+}
+
+@media(max-width:600px){
+    .Our_Doctor_Card_Container,.Our_Services_Card_Container {
+        margin-top: 2px;
+      }
+
+
+}
+@media(max-width:520px){
+    .About_us_home_text {
+        margin: 50px auto;
+    }
 }

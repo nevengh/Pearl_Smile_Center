@@ -159,6 +159,9 @@ margin-top: 200px;
   }
   .mobilee_numberss{
     color: var(--primary_color);
+    padding: 0;
+  margin: 0;
+  width: 192px;
   }
   .mobile_number:hover {
     text-decoration: underline; /* Optional: Add underline on hover */

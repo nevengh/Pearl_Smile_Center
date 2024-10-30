@@ -103,3 +103,32 @@
         font-size: 18.24px;
     }
 }
+
+@media(max-width:470px){
+    .Counter_cards_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 39.54px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+      }
+}
+@media(max-width:400px){
+    .Counter_cards_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 39.54px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+      }
+}

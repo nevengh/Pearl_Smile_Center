@@ -11,6 +11,11 @@ interface Department {
   id: number;
   name: string;
 }
+interface Doctor {
+  specializations: string;
+  id: number;
+  name: string;
+}
 
 const CounterSection = () => {
   const { language } = useLanguage();
@@ -18,7 +23,7 @@ const CounterSection = () => {
 
   
   const [departmentCount, setDepartmentCount] = useState(0);
-
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
   // Fetch the number of departments
   useEffect(() => {
     const fetchDepartments = async () => {
@@ -37,7 +42,24 @@ const CounterSection = () => {
         console.error("Error fetching department data:", error);
       }
     };
+    const fetchDoctors = async () => {
+      try {
+        const response = await axios.get<{ data: Doctor[] }>("http://127.0.0.1:8000/api/specialties-slider", {
+          headers: {
+            "Accept-Language": language,
+            "Accept": "application/json",
+          },
+        });
 
+        const doctors = response.data.data;
+        console.log('hii',doctors)
+        setDoctors(doctors);
+      } catch (error) {
+        console.error("Error fetching department data:", error);
+      }
+    };
+
+    fetchDoctors();
     fetchDepartments();
   }, [language]); 
 
@@ -46,7 +68,7 @@ const CounterSection = () => {
       <SectionHeader title={translations.CounterTitle} />
       <div className="Counter_cards_container">
         <div className="Counter_card">
-          <h2 className="Counter_Number">4</h2>
+          <h2 className="Counter_Number">{doctors.length}</h2>
           <p className="Counter_Card_text">{translations.Specialists}</p>
         </div>
         <div className="Counter_card">
@@ -55,13 +77,13 @@ const CounterSection = () => {
         </div>
         <div className="Counter_card">
           <h2 className="Counter_Number">
-            10 <span>+</span>
+            2 <span>+</span>
           </h2>
           <p className="Counter_Card_text">{translations.Yearsofexperience}</p>
         </div>
         <div className="Counter_card">
           <h2 className="Counter_Number">
-            50 <span>+</span>
+            20 <span>+</span>
           </h2>
           <p className="Counter_Card_text">{translations.Patientseveryday}</p>
         </div>

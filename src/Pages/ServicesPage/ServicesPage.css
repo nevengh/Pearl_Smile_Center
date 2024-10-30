@@ -10,3 +10,8 @@
     padding: 10px 15px;
     max-width: 1103px;
 }
+.Our_Services_Card_Container{
+    width: 80%;
+    margin: 60px auto;
+    flex-wrap: wrap;
+}

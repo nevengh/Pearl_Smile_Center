@@ -27,7 +27,7 @@ const OurServiceSection = () => {
     const fetchServices = async () => {
       try {
         const response = await axios.get<{ data: Service[] }>(
-          "https://ahmedballeh.com/dashboard/api/servicses-slider",
+          "http://127.0.0.1:8000/api/servicses-slider",
           {
             headers: {
               "Accept-Language": language,

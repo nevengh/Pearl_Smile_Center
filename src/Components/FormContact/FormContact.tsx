@@ -65,7 +65,7 @@ const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
     e.preventDefault();
     console.log('Form Data:', formData);
     try {
-      const response = await axios.post('https://ahmedballeh.com/dashboard/api/booking', {
+      const response = await axios.post('http://127.0.0.1:8000/api/booking', {
         headers: {
           'Accept-Language': language,
           'Accept': 'application/json',

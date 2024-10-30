@@ -35,7 +35,7 @@ const Gallery = () => {
     const fetchPhotoGallery = async () => {
       try {
         const response = await axios.get<{ data: PhotoGallery[] }>(
-          "https://ahmedballeh.com/dashboard/api/photo-gallery",
+          "http://127.0.0.1:8000/api/photo-gallery",
           {
             headers: {
               "Accept-Language": language,
@@ -58,7 +58,7 @@ const Gallery = () => {
     const fetchVideoGallery = async () => {
       try {
         const response = await axios.get<{ data: VideoGallery[] }>(
-          "https://ahmedballeh.com/dashboard/api/video-gallery",
+          "http://127.0.0.1:8000/api/video-gallery",
           {
             headers: {
               "Accept-Language": language,
