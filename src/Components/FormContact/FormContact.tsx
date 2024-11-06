@@ -33,7 +33,7 @@ const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get<{ data: Service[] }>('https://ahmedballeh.com/dashboard/api/services-names', {
+        const response = await axios.get<{ data: Service[] }>('https://pearlsmilemedical.ae/dashboard/api/services-names', {
           headers: {
             'Accept-Language': language,
             'Accept': 'application/json',
@@ -65,7 +65,7 @@ const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
     e.preventDefault();
     console.log('Form Data:', formData);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/booking', {
+      const response = await axios.post('https://pearlsmilemedical.ae/dashboard/api/booking', {
         headers: {
           'Accept-Language': language,
           'Accept': 'application/json',

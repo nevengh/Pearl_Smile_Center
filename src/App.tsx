@@ -16,9 +16,14 @@ import Blogs from './Pages/Blogs/Blogs';
 import BlogsProfile from './Pages/BlogsProfile/BlogsProfile';
 import { HelmetProvider } from 'react-helmet-async';
 import AllGallery from './Pages/AllGallery/AllGallery';
-
+import TagManager from 'react-gtm-module';
 
 const App = () => {
+  const tagManagerArgs = {
+    gtmId: 'GTM-W25JNHXP'
+  };
+  
+  TagManager.initialize(tagManagerArgs);
   return (
     <div className='app'>
       <LanguageProvider>

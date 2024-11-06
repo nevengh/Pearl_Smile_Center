@@ -84,7 +84,7 @@ const ServiceProfile = () => {
     const fetchServiceById = async () => {
       try {
         const response = await axios.get<{ data: Service }>(
-          `http://127.0.0.1:8000/api/service-info/${id}`,
+          `https://pearlsmilemedical.ae/dashboard/api/service-info/${id}`,
           {
             headers: {
               Accept: "application/json",
@@ -115,8 +115,8 @@ const ServiceProfile = () => {
     <div className="ServiceProfile">
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${serviceData?.title}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        keyword={translations.serviceKeys}
+        description={translations.serviceDesc}
         type="website"
       />
       <PagesHero Hero_name={translations.services} hero_img={service} />

@@ -32,7 +32,7 @@ const AboutUS = () => {
       try {
         const response = await axios.get<{ data: AboutData }>(
           // 'http://127.0.0.1:8000/api/about-us',
-          "http://127.0.0.1:8000/api/about-us",
+          "https://pearlsmilemedical.ae/dashboard/api/about-us",
           {
             headers: {
               'Accept-Language': language,
@@ -55,8 +55,8 @@ const AboutUS = () => {
     <div className="AboutUS">
       <SeoComponnent
         title={translations.aboutTitleSeo}
-        keyword={translations.aboutKeySeo}
-        description={translations.aboutDesSEo}
+        keyword={translations.AboutKeys}
+        description={translations.AboutDesc}
         type="website"
       />
       <PagesHero Hero_name={translations.about} hero_img={about} />

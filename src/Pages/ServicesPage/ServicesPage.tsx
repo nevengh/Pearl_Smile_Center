@@ -30,7 +30,7 @@ const ServicesPage = () => {
     const fetchServices = async () => {
       try {
         const response = await axios.get<{ data: Service[] }>(
-          "http://127.0.0.1:8000/api/servicses-slider",
+          "https://pearlsmilemedical.ae/dashboard/api/servicses-slider",
           // "http://127.0.0.1:8000/api/servicses-slider",
           {
             headers: {
@@ -53,8 +53,8 @@ const ServicesPage = () => {
     <div className="ServicesPage">
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${translations.services}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        keyword={translations.serviceKeys}
+        description={translations.serviceDesc}
         type="website"
       />
       <PagesHero Hero_name={translations.services} hero_img={service} />

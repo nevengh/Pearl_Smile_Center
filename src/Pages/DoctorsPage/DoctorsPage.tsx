@@ -30,7 +30,7 @@ const DoctorsPage = () => {
       const fetchDoctors = async () => {
         try {
           const response = await axios.get<{ data: Doctor[] }>(
-            "http://127.0.0.1:8000/api/specialties-slider",
+            "https://pearlsmilemedical.ae/dashboard/api/specialties-slider",
             {
               headers: {
                 "Accept-Language": language,
@@ -51,8 +51,8 @@ const DoctorsPage = () => {
     <div className='DoctorsPage'>
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${translations.doctors}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        keyword={translations.DoctorKeys}
+        description={translations.DoctorDesc}
         type="website"
       />
         <PagesHero Hero_name={translations.doctors} hero_img={team}  />

@@ -70,6 +70,20 @@ export interface Translations {
     faq_head:string;
     service_offer_head:string;
     service_doctor_head:string;
+    HomeDesc:string;
+    HomeKeys:string;
+    AboutDesc:string;
+    AboutKeys:string;
+    serviceDesc:string;
+    serviceKeys:string;
+    DoctorDesc:string;
+    DoctorKeys:string;
+    offerDes:string;
+    offerKeys:string;
+    GalleryTitle:string;
+    GalleryDesc:string;
+    GalleryKeys:string;
+    ContactTitle:string;
   }
 
   

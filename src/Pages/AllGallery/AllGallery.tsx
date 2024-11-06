@@ -6,6 +6,7 @@ import en from "../../locales/en";
 import galleryimg from '../../assets/images/about_hero.png'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import SeoComponnent from '../../Components/SeoComponnent/SeoComponnent';
 
 interface PhotoGallery {
     id: number;
@@ -36,8 +37,8 @@ const AllGallery = () => {
     const fetchPhotoGallery = async () => {
       try {
         const response = await axios.get<{ data: PhotoGallery[] }>(
-          "http://127.0.0.1:8000/api/photo-gallery",
-          // "https://ahmedballeh.com/dashboard/api/photo-gallery",
+          // "http://127.0.0.1:8000/api/photo-gallery",
+          "https://pearlsmilemedical.ae/dashboard/api/photo-gallery",
           {
             headers: {
               "Accept-Language": language,
@@ -59,8 +60,8 @@ const AllGallery = () => {
     const fetchVideoGallery = async () => {
       try {
         const response = await axios.get<{ data: VideoGallery[] }>(
-          "http://127.0.0.1:8000/api/video-gallery",
-          // "https://ahmedballeh.com/dashboard/api/video-gallery",
+          // "http://127.0.0.1:8000/api/video-gallery",
+          "https://pearlsmilemedical.ae/dashboard/api/video-gallery",
           {
             headers: {
               "Accept-Language": language,
@@ -79,6 +80,12 @@ const AllGallery = () => {
   }, [language]);
   return (
     <div className='AllGallery'>
+      <SeoComponnent
+        title={translations.GalleryTitle}
+        keyword={translations.GalleryKeys}
+        description={translations.GalleryDesc}
+        type="website"
+      />
         <PagesHero Hero_name={translations.mediaGallery} hero_img={galleryimg} />
         <div className="Gallery_page">
       <div className="gallery_content">

@@ -37,7 +37,7 @@ const ContactUs = () => {
      const fetchContactInfo = async () => {
        try {
          const response = await axios.get<{ data: ContactInfo }>(
-           "http://127.0.0.1:8000/api/contacts-info",
+           "https://pearlsmilemedical.ae/dashboard/api/contacts-info",
            {
              headers: {
                Accept: "application/json",
@@ -58,9 +58,9 @@ const ContactUs = () => {
   return (
     <div className='ContactUs'>
       <SeoComponnent
-        title={`${translations.PearlSmileSeo} | ${translations.contact}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        title={`${translations.ContactTitle} | ${translations.contact}`}
+        keyword=''
+        description=''
         type="website"
       />
         <PagesHero Hero_name={translations.contact} hero_img={contact}  />

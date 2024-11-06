@@ -13,7 +13,7 @@ import ar from "../../locales/ar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SubscriberSection from "../subscriber_section/subscriberSection";
-
+import Tiktok from '../../assets/images/icons/tiktok.svg'
 // Define the structure of the fetched data
 interface ContactInfo {
   id: number;
@@ -39,7 +39,7 @@ const Footer = () => {
     const fetchContactInfo = async () => {
       try {
         const response = await axios.get<{ data: ContactInfo }>(
-          "http://127.0.0.1:8000/api/contacts-info",
+          "https://pearlsmilemedical.ae/dashboard/api/contacts-info",
           {
             headers: {
               Accept: "application/json",
@@ -66,14 +66,17 @@ const Footer = () => {
         <div className="social_footer">
           <h1>{translations.StayUptodate}</h1>
           <div className="social_icons">
-            <a href={contactInfo?.instegram_link}>
+            <a target="_blank" href={contactInfo?.instegram_link}>
               <img src={instagram} alt="Instagram Icons" />
             </a>
-            <a href={contactInfo?.facebook_link}>
+            <a target="_blank" href={contactInfo?.facebook_link}>
               <img src={Facebook} alt="Facebook Icons" />
             </a>
-            <a href={contactInfo?.whatsapp}>
+            <a target="_blank" href={contactInfo?.whatsapp}>
               <img src={Whatsapp} alt="Whatsapp Icons" />
+            </a>
+            <a target="_blank" href={contactInfo?.tiktok_link}>
+              <img src={Tiktok} alt="Tiktok Icons" />
             </a>
           </div>
         </div>

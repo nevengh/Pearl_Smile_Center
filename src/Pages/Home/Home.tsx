@@ -51,7 +51,7 @@ const Home = () => {
       try {
         const response = await axios.get<{ data: AboutData }>(
           // "http://127.0.0.1:8000/api/about-us",
-          "https://ahmedballeh.com/dashboard/api/about-us",
+          "https://pearlsmilemedical.ae/dashboard/api/about-us",
           {
             headers: {
               "Accept-Language": language,
@@ -75,7 +75,7 @@ const Home = () => {
     const fetchOffers = async () => {
       try {
         const response = await axios.get<{ data: Offer[] }>(
-          "https://ahmedballeh.com/dashboard/api/offers",
+          "https://pearlsmilemedical.ae/dashboard/api/offers",
           {
             headers: {
               "Accept-Language": language,
@@ -97,8 +97,8 @@ const Home = () => {
     <div className="home">
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${translations.home}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        keyword={translations.HomeKeys}
+        description={translations.HomeDesc}
         type="website"
       />
       <div className="ne_hero">

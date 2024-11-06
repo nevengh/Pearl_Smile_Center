@@ -34,7 +34,7 @@ const OffersPage = () => {
     const fetchOffers = async () => {
       try {
         const response = await axios.get<{ data: Offer[] }>(
-          "http://127.0.0.1:8000/api/offers",
+          "https://pearlsmilemedical.ae/dashboard/api/offers",
           {
             headers: {
               "Accept-Language": language,
@@ -55,8 +55,8 @@ const OffersPage = () => {
     <div className='OffersPage'>
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${translations.OurOffers}`}
-        keyword={translations.blogKeySeo}
-        description={translations.blogDesSeo}
+        keyword={translations.offerKeys}
+        description={translations.offerDes}
         type="website"
       />
         <PagesHero Hero_name={translations.OurOffers} hero_img={offer} />

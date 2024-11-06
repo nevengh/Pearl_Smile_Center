@@ -38,7 +38,7 @@ const Header = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get<{ data: Service[] }>('http://127.0.0.1:8000/api/services-names', {
+        const response = await axios.get<{ data: Service[] }>('https://pearlsmilemedical.ae/dashboard/api/services-names', {
           headers: {
             'Accept-Language': language,
             'Accept': 'application/json',
@@ -113,9 +113,9 @@ const Header = () => {
     </div>
   </div>
   <div className="header_buttons">
-    <div className="book_now_header">
+    <Link to='/ContactUs' className="book_now_header">
       <button>{translations.bookNow}</button>
-    </div>
+    </Link>
   </div>
   <div className="burger_menu" onClick={toggleMenu}>
     {isMenuOpen ? <span className="close_icon">&times;</span> : <span className="burger_icon">&#9776;</span>}

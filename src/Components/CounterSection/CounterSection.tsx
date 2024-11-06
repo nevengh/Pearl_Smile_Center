@@ -28,7 +28,7 @@ const CounterSection = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get<{ data: Department[] }>("https://ahmedballeh.com/dashboard/api/services-names", {
+        const response = await axios.get<{ data: Department[] }>("https://pearlsmilemedical.ae/dashboard/api/services-names", {
           headers: {
             "Accept-Language": language,
             "Accept": "application/json",
@@ -44,7 +44,7 @@ const CounterSection = () => {
     };
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get<{ data: Doctor[] }>("http://127.0.0.1:8000/api/specialties-slider", {
+        const response = await axios.get<{ data: Doctor[] }>("https://pearlsmilemedical.ae/dashboard/api/specialties-slider", {
           headers: {
             "Accept-Language": language,
             "Accept": "application/json",
