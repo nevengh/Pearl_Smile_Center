@@ -1,14 +1,14 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import './DoctocProfile.css';
-import axios from 'axios';
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./DoctocProfile.css";
+import axios from "axios";
 import { useLanguage } from "../../LanguageContext";
 import en from "../../locales/en";
 import ar from "../../locales/ar";
-import PagesHero from '../../Components/PagesHero/PagesHero';
-import team from '../../assets/images/ourTeam.png'
-import ServicesCard from '../../Components/ServicesCard/ServicesCard';
-import SeoComponnent from '../../Components/SeoComponnent/SeoComponnent';
+import PagesHero from "../../Components/PagesHero/PagesHero";
+import team from "../../assets/images/ourTeam.png";
+import ServicesCard from "../../Components/ServicesCard/ServicesCard";
+import SeoComponnent from "../../Components/SeoComponnent/SeoComponnent";
 // import ReactPlayer from 'react-player';
 
 // Define the structure of the service and doctor's data
@@ -31,11 +31,11 @@ interface Doctor {
     path: string;
     alt: string;
   } | null; // Optional image field to handle missing data
-  video?:{
-    id:number;
-    path:string;
-    description:string;
-  }
+  video?: {
+    id: number;
+    path: string;
+    description: string;
+  };
   specialization: string;
   resume: string | null; // Allow null for the resume
   phone_number: string;
@@ -48,7 +48,7 @@ const DoctorProfile = () => {
 
   // Extract the doctor's id from the URL
   const { id } = useParams<{ id: string }>();
-  
+
   // State to hold the doctor’s data
   const [doctor, setDoctor] = useState<Doctor | null>(null);
 
@@ -56,16 +56,20 @@ const DoctorProfile = () => {
   useEffect(() => {
     const fetchDoctorById = async () => {
       try {
-        const response = await axios.get<{ data: Doctor }>(`https://pearlsmilemedical.ae/dashboard/api/specialists/${id}`, {
-          headers: {
-            'Accept': 'application/json',
-            'Accept-Language': language, // Pass the current language to the request header
-          },
-        });
+        const response = await axios.get<{ data: Doctor }>(
+          `https://pearlsmilemedical.ae/dashboard/api/specialists/${id}`,
+          // `http://127.0.0.1:8000/api/specialists/${id}`,
+          {
+            headers: {
+              Accept: "application/json",
+              "Accept-Language": language, // Pass the current language to the request header
+            },
+          }
+        );
         setDoctor(response.data.data); // Set doctor data in state
-        console.log('Doctor Data:', response.data.data);
+        console.log("Doctor Data:", response.data.data);
       } catch (error) {
-        console.error('Error fetching doctor details:', error);
+        console.error("Error fetching doctor details:", error);
       }
     };
 
@@ -78,7 +82,7 @@ const DoctorProfile = () => {
   }
 
   return (
-    <div className='DoctorProfile'>
+    <div className="DoctorProfile">
       <SeoComponnent
         title={`${translations.PearlSmileSeo} | ${doctor?.name}`}
         keyword={`${doctor?.name}, ${doctor?.specializations}, ${translations.doctors}`}
@@ -90,16 +94,23 @@ const DoctorProfile = () => {
         {/* Safely check if doctor.image exists */}
         <div className="img_doctor">
           {doctor.image ? (
-            <img src={doctor.image.path} alt={doctor.image.alt || "Doctor image"} />
+            <img
+              src={doctor.image.path}
+              alt={doctor.image.alt || "Doctor image"}
+            />
           ) : (
             <p>No image available</p> // Fallback if no image is available
           )}
         </div>
 
         <div className="doctor_info_sec">
-          <h1 className="doctor_name">{doctor.name || 'No name available'}</h1>
-          <h3 className='doctor_spec'>{doctor.specializations || 'No specializations available'}</h3>
-          <p className='doctor_resume'>{doctor.resume || 'No resume available'}</p>
+          <h1 className="doctor_name">{doctor.name || "No name available"}</h1>
+          <h3 className="doctor_spec">
+            {doctor.specializations || "No specializations available"}
+          </h3>
+          <p className="doctor_resume">
+            {doctor.resume || "No resume available"}
+          </p>
         </div>
 
         <div className="doctor_video">
@@ -108,7 +119,9 @@ const DoctorProfile = () => {
 
         {/* Doctor's Services Section */}
         <div className="doctor_services">
-          <h1 className='doctor_services_title'>{translations.servicesName} {doctor.name} :</h1>
+          <h1 className="doctor_services_title">
+            {translations.servicesName} {doctor.name} :
+          </h1>
           <div className="services_card_container">
             {doctor.services.length > 0 ? (
               doctor.services.map((service) => (
@@ -125,18 +138,16 @@ const DoctorProfile = () => {
             )}
           </div>
           <div className="video">
-          
-          {doctor.video && (
-            <div className="video">
-              <iframe 
+            {doctor.video && (
+              <div className="video">
+                <iframe
                   src={doctor.video.path}
-                  frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen>
-              </iframe>
-              
-            </div>
-          )}
-          
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            )}
           </div>
         </div>
       </div>

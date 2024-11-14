@@ -44,6 +44,38 @@ const Home = () => {
 
   // State to hold offers data
   const [offers, setOffers] = useState<Offer[]>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [offersPerSlide, setOffersPerSlide] = useState(3);
+
+  // Determine the number of offers per slide based on screen width
+  const updateOffersPerSlide = () => {
+    if (window.innerWidth < 768) {
+      setOffersPerSlide(1);
+    } else if (window.innerWidth < 992) {
+      setOffersPerSlide(2);
+    } else {
+      setOffersPerSlide(3);
+    }
+  };
+
+  useEffect(() => {
+    updateOffersPerSlide(); // Set initial offers per slide
+    window.addEventListener("resize", updateOffersPerSlide); // Update on resize
+    return () => window.removeEventListener("resize", updateOffersPerSlide);
+  }, []);
+  // Create slides based on the number of offers per slide
+  const slides = [];
+  for (let i = 0; i < offers.length; i += offersPerSlide) {
+    slides.push(offers.slice(i, i + offersPerSlide));
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   // Fetch about data
   useEffect(() => {
@@ -76,6 +108,7 @@ const Home = () => {
       try {
         const response = await axios.get<{ data: Offer[] }>(
           "https://pearlsmilemedical.ae/dashboard/api/offers",
+          // "http://127.0.0.1:8000/api/offers",
           {
             headers: {
               "Accept-Language": language,
@@ -111,27 +144,34 @@ const Home = () => {
       </div>
       {/* Our Offers */}
       <div className="Our_Offers_Home">
-        <SectionHeader title={translations.OurOffers} />
-        <div className="Our_Offers_Cards_container">
-          {offers.length > 0 ? (
-            offers
-              .slice(0, 3)
-              .map((offer) => (
-                <OffersCard
-                  key={offer.id}
-                  defaultImage={offer.main_image.path}
-                  hoverImage={offer.sub_image.path}
-                />
-              ))
-          ) : (
-            <p>{translations.loadingOffers}</p>
-          )}
+      <SectionHeader title={translations.OurOffers} />
+      {slides.length > 0 ? (
+        <div className="slider">
+          <button onClick={prevSlide} className="slider-button left">
+            {"<"}
+          </button>
+          <div className="slide-container">
+            {slides[currentSlide]?.map((offer) => (
+              <OffersCard
+                key={offer.id}
+                defaultImage={offer.main_image.path}
+                hoverImage={offer.sub_image.path}
+              />
+            ))}
+            
+          </div>
+          <button onClick={nextSlide} className="slider-button right">
+            {">"}
+          </button>
         </div>
-        <PageLinkBtn
+      ) : (
+        <p>No offers available</p>
+      )}
+       <PageLinkBtn
           Page_Url="/all-offers"
           Link_Name={translations.SeeOurOffersLink}
         />
-      </div>
+    </div>
       {/* Our Services */}
       <div className="Our_Services_home">
         <SectionHeader title={translations.OurServices} />

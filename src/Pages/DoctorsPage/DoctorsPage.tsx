@@ -31,6 +31,7 @@ const DoctorsPage = () => {
         try {
           const response = await axios.get<{ data: Doctor[] }>(
             "https://pearlsmilemedical.ae/dashboard/api/specialties-slider",
+            // "http://127.0.0.1:8000/api/specialties-slider",
             {
               headers: {
                 "Accept-Language": language,
