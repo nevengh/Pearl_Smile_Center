@@ -84,7 +84,7 @@ GalleryDesc:"في مركز بيرل سمايل لدينا جميع وسائل ا
 GalleryKeys:"aesthetic clinic dubai uae	,Pearl Smile medical center ,pearl smile,مركز بيرل سمايل الطبي,مركز بسمة اللؤلؤة الطبي ,مركز طبي قريب مني ,افضل عيادة جلدية في الشارقة,مركز طبي الشارقة التعاون",
 ContactTitle:"مركز اللؤلؤة|تواصل معنا",
 
-
+loadingDoctors:"جاري تحميل قائمة الأطباء",
 
 
 };

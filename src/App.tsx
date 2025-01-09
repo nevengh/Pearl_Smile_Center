@@ -17,6 +17,7 @@ import BlogsProfile from './Pages/BlogsProfile/BlogsProfile';
 import { HelmetProvider } from 'react-helmet-async';
 import AllGallery from './Pages/AllGallery/AllGallery';
 import TagManager from 'react-gtm-module';
+import WhatsAppBtn from './Components/WhatsAppBtn/WhatsAppBtn';
 
 const App = () => {
   const tagManagerArgs = {
@@ -44,6 +45,7 @@ const App = () => {
           <Route  path='/blogs/:id' element={<BlogsProfile/>}  />
           <Route path='/gallery' element={<AllGallery/>} />
         </Routes>
+        <WhatsAppBtn/>
         <Footer/>
       </BrowserRouter>
       </HelmetProvider>

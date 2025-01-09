@@ -83,7 +83,7 @@ GalleryDesc:"At Pearl Smile Center, we have all the comforts to make our patient
 GalleryTitle:"Pearl Smile|Gallery",
 GalleryKeys:"aesthetic clinic dubai uae	,Pearl Smile medical center ,pearl smile,مركز بيرل سمايل الطبي,مركز بسمة اللؤلؤة الطبي ,مركز طبي قريب مني ,افضل عيادة جلدية في الشارقة,مركز طبي الشارقة التعاون",
 ContactTitle:"Pearl Smile|Contact US",
-
+loadingDoctors:"loading Doctors..."
 
 
 };

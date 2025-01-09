@@ -72,7 +72,7 @@ const DoctorsPage = () => {
               />
             ))
           ) : (
-            <p>{translations.loading}</p> // Handle empty state or loading
+            <p>{translations.loadingDoctors}</p> // Handle empty state or loading
           )}
         </div>
 

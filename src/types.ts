@@ -84,6 +84,7 @@ export interface Translations {
     GalleryDesc:string;
     GalleryKeys:string;
     ContactTitle:string;
+    loadingDoctors:string;
   }
 
   
