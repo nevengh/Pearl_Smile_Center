@@ -62,11 +62,11 @@ const DoctorProfile = () => {
           {
             headers: {
               Accept: "application/json",
-              "Accept-Language": language, // Pass the current language to the request header
+              "Accept-Language": language, 
             },
           }
         );
-        setDoctor(response.data.data); // Set doctor data in state
+        setDoctor(response.data.data);
         console.log("Doctor Data:", response.data.data);
       } catch (error) {
         console.error("Error fetching doctor details:", error);
@@ -74,9 +74,8 @@ const DoctorProfile = () => {
     };
 
     fetchDoctorById();
-  }, [id, language]); // Refetch when id or language changes
+  }, [id, language]);
 
-  // Display loading state until the doctor data is available
   if (!doctor) {
     return <p>Loading doctor details...</p>;
   }
@@ -91,7 +90,7 @@ const DoctorProfile = () => {
       />
       <PagesHero Hero_name={translations.OurTeam} hero_img={team} />
       <div className="Doctor_Profile_content_container">
-        {/* Safely check if doctor.image exists */}
+ 
         <div className="img_doctor">
           {doctor.image ? (
             <img
@@ -99,7 +98,7 @@ const DoctorProfile = () => {
               alt={doctor.image.alt || "Doctor image"}
             />
           ) : (
-            <p>No image available</p> // Fallback if no image is available
+            <p>No image available</p> 
           )}
         </div>
 

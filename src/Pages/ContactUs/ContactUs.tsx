@@ -29,10 +29,10 @@ interface ContactInfo {
 const ContactUs = () => {
     const { language } = useLanguage();
   const translations = language === 'ar' ? ar : en;
-   // State to store contact information
+ 
    const [contactInfo, setContactInfo] = useState<ContactInfo | null>(null);
 
-   // Fetch contact information from the API
+
    useEffect(() => {
      const fetchContactInfo = async () => {
        try {
@@ -41,11 +41,11 @@ const ContactUs = () => {
            {
              headers: {
                Accept: "application/json",
-               "Accept-Language": language, // Pass the current language to the request header
+               "Accept-Language": language,
              },
            }
          );
-         setContactInfo(response.data.data); // Set the fetched contact information
+         setContactInfo(response.data.data); 
          console.log("contact-info", response.data.data);
        } catch (error) {
          console.error("Error fetching contact information:", error);
@@ -53,7 +53,7 @@ const ContactUs = () => {
      };
  
      fetchContactInfo();
-   }, [language]); // Refetch contact information when language changes
+   }, [language]); 
    const map = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.4128595675497!2d55.3807487!3d25.323923500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bd48e07b16f%3A0x9bc425fdc12d5e73!2sPearl%20Smile%20Medical%20Center!5e0!3m2!1sen!2sus!4v1729205944891!5m2!1sen!2sus"
   return (
     <div className='ContactUs'>
@@ -93,7 +93,7 @@ const ContactUs = () => {
               contactInfo.mobile_numbers.map((number, index) => (
                 <a key={index} href={`tel:${number}`} className="mobile_number">
                   {number}
-                </a> // Render each mobile number as a clickable link
+                </a>
               ))
             ) : (
               <p>No phone numbers available</p>

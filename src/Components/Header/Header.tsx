@@ -29,10 +29,10 @@ const Header = () => {
     setIsServicesOpen(!isServicesOpen);
   };
 
-  // Close the menu when navigating to another page
+
   const handleLinkClick = () => {
-    setIsMenuOpen(false);  // Close the menu after clicking a link
-    setIsServicesOpen(false);  // Close the services dropdown as well
+    setIsMenuOpen(false); 
+    setIsServicesOpen(false);  
   };
 
   useEffect(() => {
@@ -44,8 +44,8 @@ const Header = () => {
             'Accept': 'application/json',
           },
         });
-        console.log('API response:', response.data); // Log the response to check the data
-        setServices(response.data.data); // Set the services in state
+        console.log('API response:', response.data); 
+        setServices(response.data.data);
       } catch (error) {
         console.error('Error fetching services:', error);
       }
@@ -56,13 +56,13 @@ const Header = () => {
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLanguage(e.target.value as 'en' | 'ar');
-    setIsMenuOpen(false); // Close the menu after changing the language
-    setIsServicesOpen(false); // Close the services dropdown as well
+    setIsMenuOpen(false); 
+    setIsServicesOpen(false);
   };
 
   const handleServiceClick = (serviceId: number) => {
-    handleLinkClick(); // Close the dropdown
-    navigate(`/service/${serviceId}`); // Navigate to the service page
+    handleLinkClick(); 
+    navigate(`/service/${serviceId}`);
   };
 
   return (

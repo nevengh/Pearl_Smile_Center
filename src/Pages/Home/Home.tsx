@@ -15,7 +15,7 @@ import FormContact from "../../Components/FormContact/FormContact";
 import Gallery from "../../Components/Gallery/Gallery";
 import SeoComponnent from "../../Components/SeoComponnent/SeoComponnent";
 
-// Define the interface for the fetched data
+
 interface AboutData {
   id: number;
   description: string;
@@ -39,15 +39,15 @@ const Home = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
 
-  // State to hold the about description
+
   const [aboutText, setAboutText] = useState("");
 
-  // State to hold offers data
+
   const [offers, setOffers] = useState<Offer[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [offersPerSlide, setOffersPerSlide] = useState(3);
 
-  // Determine the number of offers per slide based on screen width
+
   const updateOffersPerSlide = () => {
     if (window.innerWidth < 768) {
       setOffersPerSlide(1);
@@ -59,11 +59,11 @@ const Home = () => {
   };
 
   useEffect(() => {
-    updateOffersPerSlide(); // Set initial offers per slide
-    window.addEventListener("resize", updateOffersPerSlide); // Update on resize
+    updateOffersPerSlide();
+    window.addEventListener("resize", updateOffersPerSlide);
     return () => window.removeEventListener("resize", updateOffersPerSlide);
   }, []);
-  // Create slides based on the number of offers per slide
+
   const slides = [];
   for (let i = 0; i < offers.length; i += offersPerSlide) {
     slides.push(offers.slice(i, i + offersPerSlide));

@@ -8,14 +8,14 @@ import axios from 'axios';
 const SubscriberSection = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
-  const [email, setEmail] = useState(''); // To store email input
-  const [message, setMessage] = useState(''); // To store success/error message
+  const [email, setEmail] = useState(''); 
+  const [message, setMessage] = useState('');
 
-  // Handle form submission
+  
   const handleSubscribe = async (e: React.FormEvent | React.MouseEvent) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
 
-    // Check if email is valid and non-empty
+    
     if (!email) {
       setMessage('Please enter a valid email address');
       return;
@@ -23,7 +23,7 @@ const SubscriberSection = () => {
 
     try {
       const response = await axios.post('https://pearlsmilemedical.ae/dashboard/api/subscriber', {
-        email: email, // Send the email from state
+        email: email,
       });
 
       if (response.status === 201) {
@@ -47,8 +47,8 @@ const SubscriberSection = () => {
           placeholder="email" 
           type="email" 
           className="input" 
-          value={email} // Bind input to state
-          onChange={(e) => setEmail(e.target.value)} // Update state on input change
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
           required 
         />
         

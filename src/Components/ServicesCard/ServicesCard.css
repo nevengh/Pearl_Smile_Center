@@ -3,11 +3,11 @@
   height: 300px;
   border-radius: 10px;
   cursor: pointer;
-  overflow: hidden; /* Ensures that the image does not overflow the card */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Add a fallback background color */
+  background-color: #f0f0f0; 
   position: relative;
 }
 .servie_name_card{

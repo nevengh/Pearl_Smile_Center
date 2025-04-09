@@ -25,20 +25,20 @@ const Blogs = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
 
-  // State to store the fetched blogs
+
   const [blogsData, setBlogsData] = useState<Blog[]>([]);
 
-  // Fetch blogs from the API
+
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get<{ data: Blog[] }>("https://pearlsmilemedical.ae/dashboard/api/blogs", {
           headers: {
             "Accept": "application/json",
-            "Accept-Language": language, // Pass language to fetch the correct blog translations
+            "Accept-Language": language, 
           },
         });
-        setBlogsData(response.data.data); // Set the fetched blogs
+        setBlogsData(response.data.data); 
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }

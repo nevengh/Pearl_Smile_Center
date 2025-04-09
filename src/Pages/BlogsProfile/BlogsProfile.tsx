@@ -22,12 +22,12 @@ interface Blog {
 const BlogsProfile = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
-  // State to store the fetched blogs
+
   const [blogData, setBlogData] = useState<Blog | null>(null);
-  // Extract the service id from the URL
+
   const { id } = useParams<{ id: string }>();
 
-  // Fetch blog data by ID
+ 
   useEffect(() => {
     const fetchBlogById = async () => {
       try {
@@ -36,11 +36,11 @@ const BlogsProfile = () => {
           {
             headers: {
               Accept: "application/json",
-              "Accept-Language": language, // Pass the current language to the request header
+              "Accept-Language": language, 
             },
           }
         );
-        setBlogData(response.data.data); // Set blog data in state
+        setBlogData(response.data.data);
       } catch (error) {
         console.error("Error fetching blog details:", error);
       }

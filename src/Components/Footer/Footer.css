@@ -43,8 +43,6 @@ margin-top: 200px;
 }
 
 
-
-/* From Uiverse.io by Yaya12085 */ 
 .subscrip_input {
     position: relative;
     display: flex;
@@ -164,7 +162,7 @@ margin-top: 200px;
   width: 192px;
   }
   .mobile_number:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
+    text-decoration: underline; 
   }
   .Tel{
     font-family: var(--form_font);

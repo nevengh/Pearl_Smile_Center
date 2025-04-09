@@ -1,8 +1,6 @@
 .BlogsCard{
     border-radius: 18.43px;
     width: 465px;
-    /* 
-    height: 464px; */
     background-color: var(--primary_color);
     padding: 20px 19px;
 }

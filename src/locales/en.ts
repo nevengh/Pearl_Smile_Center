@@ -8,7 +8,7 @@ const en: Translations = {
   doctors: "Our Doctors",
   blogs: "Blogs",
   bookNow: "Book Now",
-  loading: 'Loading services...', // Add this line
+  loading: 'Loading services...', 
   slideTitle: "Where Health Meets Beauty",
   slideText: "At Pearl Smile Medical Center, we provide all health and beauty services, using the latest technologies and devices and a cadre of the most efficient doctors.",
   AboutSectionHeader: "Welcome to pearl smile",

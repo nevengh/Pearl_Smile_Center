@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogsCard.css';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { useLanguage } from '../../LanguageContext';
 import ar from '../../locales/ar';
 import en from '../../locales/en';
@@ -11,7 +11,7 @@ interface BlogsCardProps {
   title: string;
   tags: string;
   blogs_text: string;
-  id: number; // Add ID as a prop
+  id: number; 
 }
 
 const BlogsCard: React.FC<BlogsCardProps> = ({ img_url, img_alt, title, tags, blogs_text, id }) => {

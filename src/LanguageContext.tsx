@@ -15,16 +15,15 @@ export const useLanguage = () => {
   return context;
 };
 
-// Define the type for the LanguageProvider props
 type LanguageProviderProps = {
   children: ReactNode;
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<'en' | 'ar'>('en'); // Default to English
+  const [language, setLanguage] = useState<'en' | 'ar'>('en'); 
 
   useEffect(() => {
-    // Update the `dir` attribute and class based on the language
+
     const html = document.documentElement;
 
     if (language === 'ar') {
@@ -34,7 +33,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
       html.setAttribute('dir', 'ltr');
       html.classList.remove('rtl');
     }
-  }, [language]); // Re-run when the language changes
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

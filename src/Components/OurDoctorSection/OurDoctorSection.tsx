@@ -37,7 +37,7 @@ const OurDoctorSection = () => {
             },
           }
         );
-        setDoctors(response.data.data); // Set the doctors in state
+        setDoctors(response.data.data); 
         console.log("Doctors", response.data.data);
       } catch (error) {
         console.error("Error fetching doctors:", error);
@@ -45,22 +45,22 @@ const OurDoctorSection = () => {
     };
 
     fetchDoctors();
-  }, [language]); // Re-fetch doctors if the language changes
+  }, [language]); 
   return (
     <div className="Our_Doctor_Card_Container">
           {doctors.length > 0 ? (
             doctors.slice(0, 3).map((doctor) => (
               <DoctorCard
                 key={doctor.id}
-                id={doctor.id} // Pass doctor ID to DoctorCard
-                img_url={doctor.image.path} // Use path for doctor image
-                Doctor_Name={doctor.name} // Use doctor name
-                img_alt={doctor.image.alt} // Use alt text
-                Doctor_sevice={doctor.specializations} // Use doctor specialization
+                id={doctor.id}
+                img_url={doctor.image.path} 
+                Doctor_Name={doctor.name}
+                img_alt={doctor.image.alt} 
+                Doctor_sevice={doctor.specializations} 
               />
             ))
           ) : (
-            <p>{translations.loading}</p> // Handle empty state or loading
+            <p>{translations.loading}</p> 
           )}
         </div>
   )

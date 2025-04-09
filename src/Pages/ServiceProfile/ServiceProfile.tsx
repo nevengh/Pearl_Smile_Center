@@ -70,16 +70,16 @@ const ServiceProfile = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
 
-  // Extract the service id from the URL
+
   const { id } = useParams<{ id: string }>();
 
-  // State to hold service data
+
   const [serviceData, setServiceData] = useState<Service | null>(null);
 
-  // State to manage the active FAQ for accordion
+
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  // Fetch service data by ID
+
   useEffect(() => {
     const fetchServiceById = async () => {
       try {
@@ -102,7 +102,7 @@ const ServiceProfile = () => {
     fetchServiceById();
   }, [id, language]);
 
-  // Toggle FAQ visibility
+
   const toggleFaq = (faqId: number) => {
     setActiveFaq((prevFaqId) => (prevFaqId === faqId ? null : faqId));
   };

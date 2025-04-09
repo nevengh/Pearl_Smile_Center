@@ -32,7 +32,7 @@
       align-items: center;
       gap: 83px;
       flex-wrap: wrap;
-      /* border: 1px solid red; */
+
       margin-top: 207px;
   }
   .contact_info_1{
@@ -54,7 +54,7 @@
   }
   iframe {
       border-radius: 10px;
-      /* filter: drop-shadow(0px 0px 5px #000000e1); */
+
       width: 600px;
   }
   

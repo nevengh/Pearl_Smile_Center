@@ -20,7 +20,7 @@ interface Service {
   } | null; 
 }
 const ServicesPage = () => {
-  // State to hold services data
+
   const [services, setServices] = useState<Service[]>([]);
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;

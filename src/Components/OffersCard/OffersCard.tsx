@@ -7,14 +7,14 @@ interface OffersCardProps{
 const OffersCard :React.FC<OffersCardProps>= ({ defaultImage, hoverImage }) => {
   const [currentImage, setCurrentImage] = useState(defaultImage);
 
-  // Function to handle mouse enter (hover)
+
   const handleMouseEnter = () => {
-    setCurrentImage(hoverImage); // Set hover image when mouse enters
+    setCurrentImage(hoverImage);
   };
 
-  // Function to handle mouse leave
+  
   const handleMouseLeave = () => {
-    setCurrentImage(defaultImage); // Revert to default image when mouse leaves
+    setCurrentImage(defaultImage);
   };
 
   return (

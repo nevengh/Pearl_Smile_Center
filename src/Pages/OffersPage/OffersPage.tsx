@@ -27,9 +27,9 @@ interface Offer {
 const OffersPage = () => {
     const { language } = useLanguage();
     const translations = language === 'ar' ? ar : en;
- // State to hold offers data
+
  const [offers, setOffers] = useState<Offer[]>([]);
-     // Fetch offers data
+
   useEffect(() => {
     const fetchOffers = async () => {
       try {
@@ -43,14 +43,14 @@ const OffersPage = () => {
           }
         );
 
-        setOffers(response.data.data); // Set the offers in state
+        setOffers(response.data.data);
       } catch (error) {
         console.error("Error fetching offers:", error);
       }
     };
 
     fetchOffers();
-  }, [language]); // Re-fetch offers if the language changes
+  }, [language]); 
   return (
     <div className='OffersPage'>
       <SeoComponnent
@@ -71,13 +71,13 @@ const OffersPage = () => {
               ) => (
                 <OffersCard
                   key={offer.id}
-                  defaultImage={offer.main_image.path} // Use path for default image
-                  hoverImage={offer.sub_image.path} // Use path for hover image
+                  defaultImage={offer.main_image.path} 
+                  hoverImage={offer.sub_image.path}
                 />
               )
             )
           ) : (
-            <p>{translations.loadingOffers}</p> // Handle empty state or loading
+            <p>{translations.loadingOffers}</p>
           )}
         </div>
         </div>

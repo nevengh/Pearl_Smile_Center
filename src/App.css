@@ -1,4 +1,4 @@
 .app {
-    overflow: auto; /* تأكد من أن الحاوية قابلة للتمرير */
-    height: 100vh; /* يجب أن يكون الارتفاع كاملاً */
+    overflow: auto;
+    height: 100vh; 
   }

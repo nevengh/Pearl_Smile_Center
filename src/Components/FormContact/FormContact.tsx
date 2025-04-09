@@ -13,7 +13,7 @@ interface Service {
 }
 
 interface FormContactProps {
-  serviceId: string; // Receive the serviceId as a prop
+  serviceId: string;
 }
 
 const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
@@ -26,7 +26,7 @@ const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
     email: '',
     phone: '',
     message: '',
-    service_id: serviceId || '' // Initialize with the passed serviceId
+    service_id: serviceId || '' 
   });
   const [responseMessage, setResponseMessage] = useState('');
 
@@ -49,7 +49,7 @@ const FormContact: React.FC<FormContactProps> = ({ serviceId }) => {
   }, [language]);
 
   useEffect(() => {
-    // Update the formData service_id whenever serviceId changes
+
     setFormData((prevData) => ({ ...prevData, service_id: serviceId }));
   }, [serviceId]);
 

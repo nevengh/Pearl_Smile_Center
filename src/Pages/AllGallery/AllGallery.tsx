@@ -32,12 +32,12 @@ const AllGallery = () => {
   const [videoGallery,setVideoGallery] = useState<VideoGallery[]>([]);
   const [isPhotoGallery, setIsPhotoGallery] = useState(true);
 
-  // Fetch photo gallery data
+
   useEffect(() => {
     const fetchPhotoGallery = async () => {
       try {
         const response = await axios.get<{ data: PhotoGallery[] }>(
-          // "http://127.0.0.1:8000/api/photo-gallery",
+
           "https://pearlsmilemedical.ae/dashboard/api/photo-gallery",
           {
             headers: {
@@ -55,12 +55,10 @@ const AllGallery = () => {
 
     fetchPhotoGallery();
   }, [language]);
-  // Fetch video gallery data
   useEffect(() => {
     const fetchVideoGallery = async () => {
       try {
         const response = await axios.get<{ data: VideoGallery[] }>(
-          // "http://127.0.0.1:8000/api/video-gallery",
           "https://pearlsmilemedical.ae/dashboard/api/video-gallery",
           {
             headers: {

@@ -23,7 +23,7 @@ const AboutUS = () => {
   const { language } = useLanguage();
   const translations = language === 'ar' ? ar : en;
 
-  // State to hold the about description and video
+
   const [aboutData, setAboutData] = useState<AboutData | null>(null);
 
   // Fetch about data
@@ -31,7 +31,7 @@ const AboutUS = () => {
     const fetchAbout = async () => {
       try {
         const response = await axios.get<{ data: AboutData }>(
-          // 'http://127.0.0.1:8000/api/about-us',
+
           "https://pearlsmilemedical.ae/dashboard/api/about-us",
           {
             headers: {
@@ -41,7 +41,7 @@ const AboutUS = () => {
           }
         );
 
-        setAboutData(response.data.data); // Store the entire about data
+        setAboutData(response.data.data);
         console.log('aboutUs', response.data.data);
       } catch (error) {
         console.error('Error fetching about us content:', error);

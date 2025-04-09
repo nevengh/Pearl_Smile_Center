@@ -30,8 +30,6 @@ interface ContactInfo {
 const Footer = () => {
   const { language } = useLanguage();
   const translations = language === "ar" ? ar : en;
-
-  // State to store contact information
   const [contactInfo, setContactInfo] = useState<ContactInfo | null>(null);
 
   // Fetch contact information from the API

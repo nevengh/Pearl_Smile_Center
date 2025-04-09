@@ -31,7 +31,6 @@ const DoctorsPage = () => {
         try {
           const response = await axios.get<{ data: Doctor[] }>(
             "https://pearlsmilemedical.ae/dashboard/api/specialties-slider",
-            // "http://127.0.0.1:8000/api/specialties-slider",
             {
               headers: {
                 "Accept-Language": language,
@@ -39,7 +38,7 @@ const DoctorsPage = () => {
               },
             }
           );
-          setDoctors(response.data.data); // Set the doctors in state
+          setDoctors(response.data.data); 
           console.log("Doctors", response.data.data);
         } catch (error) {
           console.error("Error fetching doctors:", error);
@@ -64,15 +63,15 @@ const DoctorsPage = () => {
             doctors.map((doctor) => (
               <DoctorCard
                 key={doctor.id}
-                id={doctor.id} // Pass doctor ID to DoctorCard
-                img_url={doctor.image.path} // Use path for doctor image
-                Doctor_Name={doctor.name} // Use doctor name
-                img_alt={doctor.image.alt} // Use alt text
-                Doctor_sevice={doctor.specializations} // Use doctor specialization
+                id={doctor.id} 
+                img_url={doctor.image.path}
+                Doctor_Name={doctor.name} 
+                img_alt={doctor.image.alt} 
+                Doctor_sevice={doctor.specializations} 
               />
             ))
           ) : (
-            <p>{translations.loadingDoctors}</p> // Handle empty state or loading
+            <p>{translations.loadingDoctors}</p> 
           )}
         </div>
 

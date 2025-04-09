@@ -48,19 +48,19 @@ const OurServiceSection = () => {
     <div className="Our_Services_Card_Container">
           {services.length > 0 ? (
             services
-              .filter((service) => service.image !== null) // Filter out services with null image
+              .filter((service) => service.image !== null) 
               .slice(0, 3)
               .map((service) => (
                 <ServicesCard
                   key={service.id}
                   id={service.id}
-                  img_url={service.image!.path} // Non-null assertion, as we've filtered out null images
-                  servie_name_card={service.title} // Pass service title
-                  img_alt={service.image!.alt} // Non-null assertion for alt text
+                  img_url={service.image!.path} 
+                  servie_name_card={service.title}
+                  img_alt={service.image!.alt} 
                 />
               ))
           ) : (
-            <p>{translations.loading}</p> // Handle empty state or loading
+            <p>{translations.loading}</p> 
           )}
         </div>
   )

@@ -53,7 +53,7 @@ const Gallery = () => {
     fetchPhotoGallery();
   }, [language]);
 
-  // Fetch video gallery data
+
   useEffect(() => {
     const fetchVideoGallery = async () => {
       try {

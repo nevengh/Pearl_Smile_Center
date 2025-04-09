@@ -1,6 +1,5 @@
 .FormContact form{
     width: 100%;
-    /* height: 600px; */
     background-color: var(--white_color);
     border-radius: 25px;
     padding: 38px 45px;
@@ -90,15 +89,15 @@
 
 @media(max-width:650px){
     .form_first_row {
-        flex-direction: column; /* Stack the inputs vertically */
-        gap: 20px; /* Adjust the gap between inputs */
-        width: 100%; /* Ensure full width of the form row */
+        flex-direction: column; 
+        gap: 20px; 
+        width: 100%; 
       }
       .input_group {
-        width: 100%; /* Make each input group take full width */
+        width: 100%; 
       }
       .input_group input {
-        width: 100%; /* Ensure the input fields take full width */
+        width: 100%; 
       }
     
 }

@@ -49,7 +49,7 @@ const Hero = React.memo(() => {
                 className="d-block w-100"
                 src={slide.image}
                 alt={`Slide ${slide.id}`}
-                loading="lazy" // تحميل الصور بشكل lazy
+                loading="lazy" 
               />
               <div className="overlay"></div>
             </div>

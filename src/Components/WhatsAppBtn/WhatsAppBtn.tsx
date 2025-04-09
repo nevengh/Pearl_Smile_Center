@@ -4,12 +4,12 @@ const WhatsAppBtn = () => {
   return (
     <div className="whatsapp-btn">
       <a
-        href="https://wa.me/971509600787" // Replace with your WhatsApp number
+        href="https://wa.me/971509600787" 
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-          src={whatsApp} // Replace with the path to your WhatsApp icon
+          src={whatsApp}
           alt="WhatsApp"
           className="whatsapp-icon"
         />
